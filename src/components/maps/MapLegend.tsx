@@ -39,14 +39,6 @@ export default function MapLegend({
     }
   };
 
-  // Debug logging
-  console.log('Legend - Data values:', values);
-  console.log('Legend - Min value:', minValue);
-  console.log('Legend - Max value:', maxValue);
-  console.log('Legend - Has year property:', hasYearProperty);
-  console.log('Legend - Sample data point:', samplePoint);
-  console.log('Legend - All data points:', dataPoints);
-
   const positionClasses = {
     "top-left": "top-4 left-4",
     "top-right": "top-4 right-4",

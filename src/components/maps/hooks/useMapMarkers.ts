@@ -249,11 +249,6 @@ export const useMapMarkers = ({
     const maxValue = Math.max(...values);
     const valueRange = maxValue - minValue;
 
-    // Debug logging
-    console.log('Data values:', values);
-    console.log('Min value:', minValue);
-    console.log('Max value:', maxValue);
-
     const currentZoom = mapInstanceRef.current?.getZoom() || zoom;
 
     dataPoints.forEach((point) => {

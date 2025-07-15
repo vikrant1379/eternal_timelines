@@ -27,7 +27,7 @@ export default function MapsPage() {
     lat: event.location!.lat,
     lng: event.location!.lng,
     name: event.title,
-    value: Math.abs(event.year), // Use absolute year as the value for visualization
+    value: event.year, // Use absolute year as the value for visualization
     description: event.description,
     category: event.category,
     year: event.year
