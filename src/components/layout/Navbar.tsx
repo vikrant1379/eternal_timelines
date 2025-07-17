@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -29,10 +28,7 @@ export default function Navbar() {
               <div className="w-8 h-8 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">ST</span>
               </div>
-              <span 
-                className="text-xl font-bold text-amber-800 dark:text-amber-300" 
-                style={{ fontFamily: 'Playfair Display, serif' }}
-              >
+              <span className="text-2xl font-bold text-amber-700 dark:text-amber-400 serif-text">
                 Sanatan Timeline
               </span>
             </div>
@@ -63,7 +59,7 @@ export default function Navbar() {
           {/* Theme Toggle and Mobile Menu */}
           <div className="flex items-center space-x-4">
             <ThemeToggle />
-            
+
             {/* Mobile menu button */}
             <div className="md:hidden">
               <button className="text-gray-700 dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-300">

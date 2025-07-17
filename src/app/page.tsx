@@ -39,21 +39,16 @@ export default function HomePage() {
   return (
     <div className="min-h-screen academic-bg">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="relative py-20 lg:py-32 hero-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="flex items-center justify-center mb-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-600 to-orange-700 rounded-xl flex items-center justify-center mr-4 shadow-md">
-                <Sparkles className="w-8 h-8 text-white" />
-              </div>
-              <h1 className="text-6xl font-bold text-gray-900" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-                Sanatan Timeline
-              </h1>
-            </div>
-            <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed serif-text">
-              Preserving the eternal threads of Indian civilization through an interactive journey across time. 
-              From the ancient wisdom of the Vedas to the modern era of independence, discover the rich tapestry 
-              that makes India&apos;s heritage truly timeless.
+            <h1 className="text-5xl lg:text-7xl font-bold text-stone-900 dark:text-transparent mb-8 hero-title" style={{ fontFamily: 'Playfair Display, serif' }}>
+              Sanatan Timeline
+            </h1>
+            <p className="text-xl lg:text-2xl text-stone-700 dark:text-cbd5e1 mb-12 max-w-4xl mx-auto serif-text hero-description">
+              Preserving the eternal threads of Indian civilization through an interactive journey 
+              across time. From the ancient wisdom of the Vedas to the modern era of 
+              independence, discover the rich tapestry that makes India's heritage truly timeless.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
