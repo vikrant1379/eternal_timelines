@@ -71,7 +71,7 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 academic-bg border-t border-gray-200 dark:border-gray-600">
+      <section className="py-16 academic-bg border-t border-gray-100 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <StatsCards 
             stats={[
@@ -85,7 +85,7 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 content-section border-t border-gray-200 dark:border-gray-600">
+      <section className="py-20 content-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
@@ -116,7 +116,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Events Section */}
-      <section className="py-20 content-section border-t border-gray-200 dark:border-gray-600">
+      <section className="py-20 content-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
