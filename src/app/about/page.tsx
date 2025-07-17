@@ -78,16 +78,16 @@ export default function AboutPage() {
         </div>
 
         {/* Mission */}
-        <div className="content-section bg-gradient-to-br from-amber-600 to-orange-700 text-white mb-12">
-          <div className="text-center">
-            <Target className="w-16 h-16 mx-auto mb-6 text-amber-200" />
-            <h2 className="text-3xl font-bold mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>Our Mission</h2>
-            <p className="text-xl max-w-4xl mx-auto leading-relaxed serif-text">
-              To create a comprehensive, accessible, and accurate digital repository of Indian civilization&apos;s 
-              rich history, philosophy, and cultural heritage. We believe that understanding our past is essential 
-              for building a better future, and we&apos;re committed to making this knowledge available to everyone, everywhere.
-            </p>
-          </div>
+        <div className="mission-card mb-12 py-12 px-8 text-center">
+          <Target className="w-16 h-16 mx-auto mb-6 text-amber-800 dark:text-amber-400" />
+          <h2 className="mission-title text-4xl mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+            Our Mission
+          </h2>
+          <p className="mission-text text-xl max-w-4xl mx-auto leading-relaxed serif-text">
+            To create a comprehensive, accessible, and accurate digital repository of Indian civilization's 
+            rich history, philosophy, and cultural heritage. We believe that understanding our past is essential 
+            for building a better future, and we're committed to making this knowledge available to everyone, everywhere.
+          </p>
         </div>
 
         {/* Values */}
@@ -107,69 +107,85 @@ export default function AboutPage() {
         </div>
 
         {/* Team */}
-        <div className="content-section mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>Our Team</h2>
+        <div className="academic-card p-8 mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-amber-400 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+            Our Team
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {team.map((member) => (
               <div
                 key={member.name}
-                className="academic-card p-6 bg-gradient-to-br from-amber-50 to-orange-50"
+                className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-700 dark:to-slate-600 p-6 rounded-xl border border-amber-200 dark:border-amber-600/20"
               >
                 <div className="flex items-center mb-4">
                   <div className="text-4xl mr-4">{member.avatar}</div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>{member.name}</h3>
-                    <p className="text-amber-700 font-semibold serif-text">{member.role}</p>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-amber-300" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                      {member.name}
+                    </h3>
+                    <p className="text-amber-700 dark:text-amber-400 font-semibold serif-text">{member.role}</p>
                   </div>
                 </div>
-                <p className="text-gray-600 serif-text">{member.description}</p>
+                <p className="text-gray-600 dark:text-gray-300 serif-text leading-relaxed">{member.description}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Features */}
-        <div className="bg-white rounded-xl shadow-md p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">What We Offer</h2>
+        <div className="academic-card p-8 mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-amber-400 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+            What We Offer
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <BookOpen className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Interactive Timeline</h3>
-              <p className="text-gray-600">
-                Explore thousands of years of history through our interactive, zoomable timeline with detailed event information.
+              <h3 className="text-xl font-bold text-gray-900 dark:text-amber-300 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                Interactive Timeline
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 serif-text leading-relaxed">
+                Explore thousands of years of history through our interactive, zoomable timeline with detailed event information and contextual insights.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <Globe className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Geographic Insights</h3>
-              <p className="text-gray-600">
-                Visualize how historical events and cultural movements spread across the Indian subcontinent.
+              <h3 className="text-xl font-bold text-gray-900 dark:text-amber-300 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                Geographic Insights
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 serif-text leading-relaxed">
+                Visualize how historical events and cultural movements spread across the Indian subcontinent through interactive maps.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Community Driven</h3>
-              <p className="text-gray-600">
-                Join our community of contributors helping to preserve and expand knowledge of Indian heritage.
+              <h3 className="text-xl font-bold text-gray-900 dark:text-amber-300 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                Community Driven
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 serif-text leading-relaxed">
+                Join our growing community of scholars, researchers, and enthusiasts helping to preserve and expand knowledge of Indian heritage.
               </p>
             </div>
           </div>
         </div>
 
         {/* FAQs */}
-        <div className="bg-white rounded-xl shadow-md p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
-          <div className="space-y-6">
+        <div className="academic-card p-8 mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-amber-400 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-8">
             {faqs.map((faq, index) => (
-              <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
+              <div key={index} className="border-b border-amber-200 dark:border-amber-600/20 pb-6 last:border-b-0">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-amber-300 mb-3 serif-text" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                  {faq.question}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 serif-text leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>

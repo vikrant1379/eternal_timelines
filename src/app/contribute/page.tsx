@@ -257,50 +257,76 @@ export default function ContributePage() {
         </div>
 
         {/* Guidelines */}
-        <div className="content-section bg-gradient-to-br from-amber-600 to-orange-700 text-white mt-12">
-          <h3 className="text-2xl font-bold mb-6 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>Contribution Guidelines</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-lg font-semibold mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>What to Include</h4>
-              <ul className="space-y-2 serif-text">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                  Accurate historical information with proper sources
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                  Clear and concise descriptions
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                  Relevant tags and categories
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                  Geographic information when available
-                </li>
-              </ul>
+        <div className="mission-card mt-12 p-8">
+          <h3 className="mission-title text-3xl text-center mb-8" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+            Contribution Guidelines
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-xl font-semibold mb-4 mission-title" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                  What to Include
+                </h4>
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-amber-800 dark:text-amber-400" />
+                    <span className="mission-text serif-text leading-relaxed">
+                      Accurate historical information with proper sources and citations
+                    </span>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-amber-800 dark:text-amber-400" />
+                    <span className="mission-text serif-text leading-relaxed">
+                      Clear, engaging descriptions that bring history to life
+                    </span>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-amber-800 dark:text-amber-400" />
+                    <span className="mission-text serif-text leading-relaxed">
+                      Relevant categories and descriptive tags for easy discovery
+                    </span>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-amber-800 dark:text-amber-400" />
+                    <span className="mission-text serif-text leading-relaxed">
+                      Geographic context and regional significance when applicable
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>Quality Standards</h4>
-              <ul className="space-y-2 serif-text">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                  Fact-checked information from reliable sources
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                  Respectful and inclusive language
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                  Proper attribution and citations
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                  Cultural sensitivity and accuracy
-                </li>
-              </ul>
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-xl font-semibold mb-4 mission-title" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                  Quality Standards
+                </h4>
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-amber-800 dark:text-amber-400" />
+                    <span className="mission-text serif-text leading-relaxed">
+                      Thoroughly fact-checked content from credible academic sources
+                    </span>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-amber-800 dark:text-amber-400" />
+                    <span className="mission-text serif-text leading-relaxed">
+                      Respectful, inclusive language that honors all perspectives
+                    </span>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-amber-800 dark:text-amber-400" />
+                    <span className="mission-text serif-text leading-relaxed">
+                      Proper attribution with clear citations and references
+                    </span>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-amber-800 dark:text-amber-400" />
+                    <span className="mission-text serif-text leading-relaxed">
+                      Cultural sensitivity and historical accuracy throughout
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
