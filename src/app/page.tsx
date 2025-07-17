@@ -71,7 +71,7 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-700">
+      <section className="py-16 bg-gray-50 dark:bg-gray-900 border-t border-gray-100 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <StatsCards 
             stats={[
@@ -85,7 +85,7 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-50 dark:academic-bg">
+      <section className="py-20 bg-white dark:academic-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
@@ -164,7 +164,7 @@ export default function HomePage() {
       {/* Mission Section */}
       <section className="py-20 bg-gray-50 dark:academic-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white text-center rounded-xl p-12 dark:content-section">
+          <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white text-center rounded-xl p-12">
             <Heart className="w-16 h-16 mx-auto mb-6 text-orange-100" />
             <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
               Our Mission
