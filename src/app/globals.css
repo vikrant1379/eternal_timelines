@@ -613,6 +613,77 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Theme-aware utility classes for consistent theming */
+  .theme-bg-primary {
+    @apply bg-white dark:bg-gray-900;
+  }
+
+  .theme-bg-secondary {
+    @apply bg-gray-50 dark:bg-gray-800;
+  }
+
+  .theme-bg-card {
+    @apply bg-white dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900;
+  }
+
+  .theme-text-primary {
+    @apply text-stone-900 dark:text-gray-100;
+  }
+
+  .theme-text-secondary {
+    @apply text-stone-700 dark:text-gray-300;
+  }
+
+  .theme-text-muted {
+    @apply text-stone-600 dark:text-gray-400;
+  }
+
+  .theme-border {
+    @apply border-stone-200 dark:border-gray-700;
+  }
+
+  .theme-border-hover {
+    @apply hover:border-orange-300 dark:hover:border-amber-600;
+  }
+
+  .theme-shadow {
+    @apply shadow-sm dark:shadow-2xl dark:shadow-black/20;
+  }
+
+  .theme-shadow-hover {
+    @apply hover:shadow-md dark:hover:shadow-2xl dark:hover:shadow-black/30;
+  }
+
+  /* Academic theme-specific utilities */
+  .academic-text-primary {
+    @apply text-stone-900 dark:text-transparent dark:bg-gradient-to-r dark:from-amber-300 dark:to-orange-400 dark:bg-clip-text;
+  }
+
+  .academic-text-secondary {
+    @apply text-stone-700 dark:text-amber-100;
+  }
+
+  .academic-bg-gradient {
+    @apply bg-gradient-to-br from-orange-50 to-amber-50 dark:from-slate-900 dark:to-slate-800;
+  }
+
+  .academic-border {
+    @apply border-orange-200 dark:border-amber-600/30;
+  }
+
+  .academic-button-primary {
+    @apply bg-orange-600 hover:bg-orange-700 text-white dark:bg-amber-600 dark:hover:bg-amber-700;
+  }
+
+  .academic-button-secondary {
+    @apply bg-white hover:bg-orange-50 text-orange-600 border-2 border-orange-600 dark:bg-gray-800 dark:text-amber-300 dark:border-amber-600 dark:hover:bg-gray-700;
+  }
+
+  /* Focus states for accessibility */
+  .theme-focus {
+    @apply focus:outline-none focus:ring-2 focus:ring-orange-500 dark:focus:ring-amber-400 focus:ring-offset-2 dark:focus:ring-offset-gray-900;
+  }
 }
 
 @tailwind base;

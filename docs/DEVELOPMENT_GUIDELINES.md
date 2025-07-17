@@ -33,6 +33,368 @@ This document outlines the essential guidelines for AI-assisted development of t
   .serif-text           /* Source Serif Pro text */
   ```
 
+## Dark/Light Mode Compatibility
+
+### Core Principles
+
+**All new features MUST support both light and dark modes seamlessly:**
+
+1. **Never use absolute colors** - Always use theme-aware classes
+2. **Test in both modes** - Verify functionality and aesthetics in both themes
+3. **Consistent contrast ratios** - Ensure accessibility in both modes
+4. **Smooth transitions** - All theme changes should be animated
+
+### Theme Context Usage
+
+**Always use the enhanced ThemeContext for theme-aware components:**
+
+```tsx
+import { useTheme } from '@/contexts/ThemeContext';
+
+const Component = () => {
+  const { theme, isLight, isDark, getThemeClass, getThemeStyle } = useTheme();
+  
+  return (
+    <div className={getThemeClass(
+      'bg-white text-stone-900',      // Light mode
+      'bg-gray-900 text-gray-100'     // Dark mode
+    )}>
+      <h1 style={{ 
+        color: getThemeStyle('#111827', '#f3f4f6') 
+      }}>
+        Theme-aware heading
+      </h1>
+    </div>
+  );
+};
+```
+
+### Theme-Aware Utility Classes
+
+**Use these pre-built utility classes for consistent theming:**
+
+```css
+/* Background Classes */
+.theme-bg-primary       /* Main backgrounds */
+.theme-bg-secondary     /* Secondary backgrounds */
+.theme-bg-card          /* Card backgrounds */
+.academic-bg-gradient   /* Academic gradient backgrounds */
+
+/* Text Classes */
+.theme-text-primary     /* Primary text */
+.theme-text-secondary   /* Secondary text */
+.theme-text-muted       /* Muted text */
+.academic-text-primary  /* Academic primary text with dark mode gradient */
+.academic-text-secondary /* Academic secondary text */
+
+/* Border Classes */
+.theme-border           /* Standard borders */
+.theme-border-hover     /* Hover border effects */
+.academic-border        /* Academic theme borders */
+
+/* Shadow Classes */
+.theme-shadow           /* Standard shadows */
+.theme-shadow-hover     /* Hover shadow effects */
+
+/* Button Classes */
+.academic-button-primary   /* Primary academic buttons */
+.academic-button-secondary /* Secondary academic buttons */
+
+/* Focus States */
+.theme-focus            /* Accessible focus states */
+```
+
+### Implementation Guidelines
+
+#### 1. Component Structure for Theme Compatibility
+
+```tsx
+// ✅ CORRECT - Theme-aware component
+const FeatureComponent: React.FC<Props> = ({ data }) => {
+  const { getThemeClass } = useTheme();
+  
+  return (
+    <div className="academic-card theme-shadow">
+      <h2 className="academic-text-primary serif-text">
+        {data.title}
+      </h2>
+      <p className="theme-text-secondary serif-text">
+        {data.description}
+      </p>
+      <button className="academic-button-primary theme-focus">
+        Action
+      </button>
+    </div>
+  );
+};
+
+// ❌ INCORRECT - Hard-coded colors
+const BadComponent: React.FC<Props> = ({ data }) => {
+  return (
+    <div className="bg-white text-black border-gray-300">
+      <h2 className="text-gray-900">{data.title}</h2>
+      <p className="text-gray-600">{data.description}</p>
+      <button className="bg-blue-500 text-white">Action</button>
+    </div>
+  );
+};
+```
+
+#### 2. CSS Custom Properties for Advanced Theming
+
+**For complex components, use CSS custom properties:**
+
+```css
+.advanced-component {
+  --bg-primary: theme('colors.white');
+  --text-primary: theme('colors.stone.900');
+  --border-color: theme('colors.orange.200');
+  
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.dark .advanced-component {
+  --bg-primary: theme('colors.gray.900');
+  --text-primary: theme('colors.gray.100');
+  --border-color: theme('colors.amber.600');
+}
+```
+
+#### 3. Dynamic Styling with Theme Context
+
+```tsx
+const DynamicComponent: React.FC = () => {
+  const { theme, getThemeStyle } = useTheme();
+  
+  const dynamicStyles = {
+    background: getThemeStyle(
+      'linear-gradient(135deg, #fff7ed, #fed7aa)',  // Light
+      'linear-gradient(145deg, #1e293b, #334155)'   // Dark
+    ),
+    boxShadow: getThemeStyle(
+      '0 4px 6px rgba(0, 0, 0, 0.1)',              // Light
+      '0 8px 16px rgba(0, 0, 0, 0.4)'              // Dark
+    )
+  };
+  
+  return (
+    <div style={dynamicStyles} className="theme-border rounded-lg p-6">
+      Content with dynamic theming
+    </div>
+  );
+};
+```
+
+### Testing Requirements
+
+**Every new feature must pass these theme compatibility tests:**
+
+1. **Visual Testing**: Component looks good in both light and dark modes
+2. **Contrast Testing**: Text maintains proper contrast ratios (WCAG AA)
+3. **Transition Testing**: Theme switching is smooth without layout shifts
+4. **State Persistence**: Theme preference is saved and restored correctly
+5. **Accessibility Testing**: Focus states work in both themes
+
+### Common Pitfalls to Avoid
+
+#### ❌ Don't Do This:
+```tsx
+// Hard-coded colors
+<div className="bg-white text-black">
+
+// Theme-unaware conditionals
+<div className={theme === 'dark' ? 'bg-gray-900' : 'bg-white'}>
+
+// Missing dark mode variants
+<button className="bg-blue-500 text-white hover:bg-blue-600">
+
+// Inconsistent color schemes
+<div className="bg-red-100 border-green-500 text-purple-900">
+```
+
+#### ✅ Do This Instead:
+```tsx
+// Theme-aware utility classes
+<div className="academic-bg-gradient theme-text-primary">
+
+// Context-based theming
+<div className={getThemeClass('bg-white', 'bg-gray-900')}>
+
+// Complete theme variants
+<button className="academic-button-primary theme-focus">
+
+// Consistent academic color scheme
+<div className="academic-card academic-border theme-shadow">
+```
+
+### New Feature Checklist
+
+**Before submitting any new feature, ensure:**
+
+- [ ] Component works in both light and dark modes
+- [ ] Uses academic color palette (amber/orange/stone)
+- [ ] Implements proper focus states with `.theme-focus`
+- [ ] Uses theme-aware utility classes or ThemeContext
+- [ ] Maintains consistent typography (Playfair Display/Source Serif Pro)
+- [ ] Includes hover and interaction states for both themes
+- [ ] Tested with theme switching (no layout shifts or visual glitches)
+- [ ] Follows accessibility guidelines (contrast, keyboard navigation)
+- [ ] Uses existing `.academic-*` classes where applicable
+
+### Migration Guide for Existing Components
+
+**To make existing components theme-compatible:**
+
+1. **Replace hard-coded colors** with theme utility classes
+2. **Add dark mode variants** using Tailwind's `dark:` prefix
+3. **Use ThemeContext** for dynamic styling needs
+4. **Test thoroughly** in both light and dark modes
+5. **Update any inline styles** to be theme-aware
+
+Example migration:
+```tsx
+// Before
+<div className="bg-white border-gray-300 text-gray-900">
+
+// After  
+<div className="academic-card theme-text-primary">
+```
+
+## Academic Theme Integration
+
+### Dark Mode Academic Design Philosophy
+
+**The dark mode maintains the scholarly, professional aesthetic while providing:**
+- **Enhanced readability** during extended reading sessions
+- **Reduced eye strain** for late-night research
+- **Premium academic feel** with gradient text effects
+- **Consistent brand identity** across both themes
+
+### Academic Dark Mode Specifications
+
+#### Typography in Dark Mode
+```tsx
+// Headings get gradient treatment in dark mode
+<h1 className="academic-text-primary" 
+    style={{ fontFamily: 'Playfair Display, serif' }}>
+  Gradient Academic Heading
+</h1>
+
+// Body text maintains readability
+<p className="academic-text-secondary serif-text">
+  Academic content with proper contrast
+</p>
+```
+
+#### Card Design in Dark Mode
+```css
+.academic-card {
+  /* Light mode: Clean white cards */
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  
+  /* Dark mode: Sophisticated gradient cards */
+  .dark & {
+    background: linear-gradient(145deg, #1e293b 0%, #1a2332 100%);
+    border: 1px solid rgba(245, 158, 11, 0.15);
+    box-shadow: 
+      0 4px 16px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+}
+```
+
+#### Button Consistency Across Themes
+```tsx
+// Primary academic buttons
+<button className="academic-button-primary theme-focus">
+  {/* Light: Orange-600, Dark: Amber-600 */}
+  Primary Action
+</button>
+
+// Secondary academic buttons  
+<button className="academic-button-secondary theme-focus">
+  {/* Maintains border and hover states in both themes */}
+  Secondary Action
+</button>
+```
+
+### Theme-Specific Enhancements
+
+#### Dark Mode Special Effects
+- **Gradient text** for headings creates premium feel
+- **Subtle inset shadows** on cards for depth
+- **Warm amber accent colors** maintain academic warmth
+- **Enhanced box shadows** for better visual hierarchy
+
+#### Light Mode Clarity
+- **High contrast** for professional readability
+- **Clean white backgrounds** for traditional academic feel
+- **Subtle orange accents** for warmth and personality
+- **Sharp typography** for scholarly authority
+
+### Implementation Best Practices
+
+#### Theme-Aware Color Selection
+```tsx
+// Academic color palette mapping
+const academicColors = {
+  light: {
+    primary: '#ea580c',      // orange-600
+    secondary: '#fed7aa',    // orange-200  
+    text: '#1c2937',         // stone-900
+    textSecondary: '#374151', // stone-700
+    background: '#ffffff',
+    cardBg: '#ffffff',
+    border: '#d1d5db'
+  },
+  dark: {
+    primary: '#f59e0b',      // amber-500
+    secondary: '#fbbf24',    // amber-400
+    text: '#f3f4f6',         // gray-100
+    textSecondary: '#e5e7eb', // gray-200  
+    background: '#0f172a',   // slate-900
+    cardBg: 'linear-gradient(145deg, #1e293b, #1a2332)',
+    border: 'rgba(245, 158, 11, 0.15)'
+  }
+};
+```
+
+#### Responsive Academic Design
+```tsx
+const AcademicComponent: React.FC = () => {
+  return (
+    <div className="academic-bg min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <section className="academic-card p-6 lg:p-8">
+          <h1 className="academic-text-primary text-3xl lg:text-4xl mb-6"
+              style={{ fontFamily: 'Playfair Display, serif' }}>
+            Responsive Academic Heading
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Theme-aware responsive grid */}
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
+```
+
+### Quality Assurance for Academic Theming
+
+#### Theme Testing Checklist
+- [ ] **Contrast ratios** meet WCAG AA standards in both themes
+- [ ] **Academic typography** renders correctly (serif fonts load)
+- [ ] **Card shadows and borders** provide proper visual hierarchy  
+- [ ] **Button states** (hover, focus, active) work in both themes
+- [ ] **Gradient text effects** in dark mode display properly
+- [ ] **Navigation elements** maintain academic professional look
+- [ ] **Form elements** follow academic styling conventions
+- [ ] **Loading states** and **animations** respect theme colors
+
 ### Typography Implementation Examples
 
 ```tsx
