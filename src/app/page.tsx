@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight, BookOpen, Map, Clock, Users, Sparkles, Heart } from 'lucide-react';
 import { timelineData } from '@/data/timeline-data';
+import StatsCards from "@/components/ui/StatsCards";
 
 export default function HomePage() {
   // Get some featured events for the homepage
@@ -76,24 +77,14 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="academic-card p-6">
-              <div className="text-3xl font-bold text-amber-700 mb-2" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>{timelineData.length}+</div>
-              <div className="text-gray-600 serif-text">Historical Events</div>
-            </div>
-            <div className="academic-card p-6">
-              <div className="text-3xl font-bold text-amber-700 mb-2" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>5000+</div>
-              <div className="text-gray-600 serif-text">Years of History</div>
-            </div>
-            <div className="academic-card p-6">
-              <div className="text-3xl font-bold text-amber-700 mb-2" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>10</div>
-              <div className="text-gray-600 serif-text">Categories</div>
-            </div>
-            <div className="academic-card p-6">
-              <div className="text-3xl font-bold text-amber-700 mb-2" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>∞</div>
-              <div className="text-gray-600 serif-text">Stories to Discover</div>
-            </div>
-          </div>
+          <StatsCards 
+            stats={[
+              { number: "65", suffix: "+", label: "Historical Events" },
+              { number: "5000", suffix: "+", label: "Years of History" },
+              { number: "10", label: "Categories" },
+              { number: "∞", label: "Stories to Discover" }
+            ]}
+          />
         </div>
       </section>
 
@@ -110,7 +101,7 @@ export default function HomePage() {
               inspire, and preserve the knowledge of our ancestors.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature) => (
               <Link
@@ -141,7 +132,7 @@ export default function HomePage() {
               influence our world today.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredEvents.map((event) => (
               <div
@@ -162,7 +153,7 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
             <Link
               href="/timeline"
