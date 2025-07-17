@@ -457,6 +457,93 @@
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08), 0 3px 8px rgba(0, 0, 0, 0.06);
   }
 
+  /* Mission card - comfortable reading styles */
+  .mission-card {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fbbf24 100%);
+    border: 1px solid #f59e0b;
+    color: #92400e;
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+
+  .dark .mission-card {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    color: #cbd5e1;
+    box-shadow: 
+      0 4px 16px rgba(0, 0, 0, 0.3),
+      0 2px 8px rgba(245, 158, 11, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .mission-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.2), 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #d97706;
+  }
+
+  .dark .mission-card:hover {
+    background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #4b5563 100%);
+    border-color: rgba(245, 158, 11, 0.35);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      0 4px 16px rgba(245, 158, 11, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
+
+  .mission-card .mission-title {
+    color: #b45309;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .dark .mission-card .mission-title {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .mission-card .mission-text {
+    color: #78350f;
+    line-height: 1.7;
+  }
+
+  .dark .mission-card .mission-text {
+    color: #e2e8f0;
+  }
+
+  .mission-card .mission-button {
+    background: #d97706;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+
+  .mission-card .mission-button:hover {
+    background: #b45309;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(185, 83, 9, 0.3);
+  }
+
+  .dark .mission-card .mission-button {
+    background: linear-gradient(135deg, #d97706, #b45309);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .dark .mission-card .mission-button:hover {
+    background: linear-gradient(135deg, #ea580c, #c2410c);
+    box-shadow: 0 4px 16px rgba(217, 119, 6, 0.3);
+  }
+
   /* Enhanced text contrast for light theme */
   .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
     color: #111827 !important;

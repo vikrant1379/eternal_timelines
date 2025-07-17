@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import { ArrowRight, BookOpen, Map, Clock, Users, Heart } from 'lucide-react';
 import { timelineData } from '@/data/timeline-data';
@@ -164,25 +163,23 @@ export default function HomePage() {
       {/* Mission Section */}
       <section className="py-20 academic-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white text-center rounded-xl p-12">
-            <Heart className="w-16 h-16 mx-auto mb-6 text-orange-100" />
-            <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <div className="mission-card py-16 px-8 rounded-3xl my-16 text-center">
+            <Heart className="h-12 w-12 mx-auto text-amber-600 dark:text-amber-400" />
+            <h2 className="mission-title text-4xl" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
               Our Mission
             </h2>
-            <p className="text-xl max-w-4xl mx-auto leading-relaxed serif-text">
-              To preserve and share the timeless wisdom, rich history, and cultural heritage of India. 
-              We believe that understanding our past is essential for building a better future, and we&apos;re 
-              committed to making this knowledge accessible to everyone, everywhere.
+            <p className="mission-text text-xl leading-relaxed max-w-4xl mx-auto serif-text">
+              To preserve and share the timeless wisdom, rich history, and cultural heritage of India. We believe
+              that understanding our past is essential for building a better future, and we're committed to making
+              this knowledge accessible to everyone, everywhere.
             </p>
-            <div className="mt-8">
-              <Link
-                href="/about"
-                className="inline-flex items-center px-6 py-3 bg-white text-orange-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
-              >
-                Learn About Our Mission
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </div>
+            <Link 
+              href="/about" 
+              className="mission-button"
+            >
+              Learn About Our Mission
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
