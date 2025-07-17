@@ -19,7 +19,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
+    <nav className="bg-gray-50/98 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-300 dark:border-gray-700 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -28,7 +28,7 @@ export default function Navbar() {
               <div className="w-8 h-8 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">ST</span>
               </div>
-              <span className="text-2xl font-bold text-orange-600 dark:text-amber-400 serif-text">
+              <span className="text-2xl font-bold text-orange-700 dark:text-amber-400 serif-text">
                 Sanatan Timeline
               </span>
             </div>
@@ -45,8 +45,8 @@ export default function Navbar() {
                   className={cn(
                     "flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors serif-text",
                     isActive
-                      ? "text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700"
-                      : "text-gray-700 dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-300 hover:bg-amber-50 dark:hover:bg-amber-900/20",
+                      ? "text-orange-700 dark:text-amber-300 bg-orange-50 dark:bg-amber-900/20 border border-orange-200 dark:border-amber-700"
+                      : "text-gray-800 dark:text-gray-300 hover:text-orange-700 dark:hover:text-amber-300 hover:bg-orange-50 dark:hover:bg-amber-900/20",
                   )}
                 >
                   <item.icon className="w-4 h-4" />
@@ -62,7 +62,7 @@ export default function Navbar() {
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button className="text-gray-700 dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-300">
+              <button className="text-gray-800 dark:text-gray-300 hover:text-orange-700 dark:hover:text-amber-300">
                 <svg
                   className="w-6 h-6"
                   fill="none"

@@ -286,7 +286,7 @@
     background: #ffffff;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
     transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
   }
 
@@ -301,9 +301,9 @@
 
   .academic-card:hover {
     border-color: #f59e0b;
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.08), 
-                0 2px 6px rgba(0, 0, 0, 0.04);
-    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.12), 
+                0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
   }
 
   .dark .academic-card:hover {
@@ -318,9 +318,9 @@
 
   .academic-card:focus-within {
     border-color: #f59e0b;
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.08), 
-                0 2px 6px rgba(0, 0, 0, 0.04);
-    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.12), 
+                0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
     outline: none;
   }
 
@@ -402,6 +402,20 @@
   /* Professional background */
   .academic-bg {
     background: linear-gradient(135deg, #fefbf7 0%, #ffffff 50%, #fef8f0 100%);
+    position: relative;
+  }
+
+  .academic-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(251, 191, 36, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.02) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(245, 158, 11, 0.025) 0%, transparent 50%);
+    pointer-events: none;
   }
 
   .dark .academic-bg {
@@ -422,305 +436,176 @@
     pointer-events: none;
   }
 
-  /* Subtle pattern background */
-  .pattern-bg {
-    background-image: radial-gradient(circle at 2px 2px, rgba(217, 119, 6, 0.1) 1px, transparent 0);
-    background-size: 20px 20px;
-  }
-
-  /* Professional card hover effects */
-  .card-hover {
-    transition: all 0.2s ease;
-  }
-
-  .card-hover:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  }
-
-  /* Professional primary button */
-  .btn-primary {
-    background: #d97706;
-    transition: all 0.2s ease;
-  }
-
-  .btn-primary:hover {
-    background: #b45309;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(217, 119, 6, 0.2);
-  }
-
-  /* Academic content sections */
-  .content-section {
+  /* Enhanced light theme visibility */
+  .light .academic-card {
     background: #ffffff;
-    border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border: 1px solid #f3f4f6;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.06);
   }
 
-  .dark .content-section {
-    background: linear-gradient(145deg, #1e293b 0%, #1a2332 100%);
-    border: 1px solid rgba(245, 158, 11, 0.1);
-    box-shadow: 
-      0 4px 16px rgba(0, 0, 0, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  .light .academic-card:hover {
+    border-color: #f59e0b;
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15), 
+                0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
   }
 
-  /* Professional typography scale */
-  .text-academic-xl {
-    font-size: 2.25rem;
-    line-height: 1.2;
-    font-weight: 600;
-    color: #111827;
+  /* Light theme content sections */
+  .light .content-section {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08), 0 3px 8px rgba(0, 0, 0, 0.06);
   }
 
-  .dark .text-academic-xl {
-    background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+  /* Enhanced text contrast for light theme */
+  .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+    color: #111827 !important;
+    text-shadow: none !important;
   }
 
-  .text-academic-lg {
-    font-size: 1.875rem;
-    line-height: 1.3;
-    font-weight: 600;
-    color: #111827;
-  }
-
-  .dark .text-academic-lg {
-    background: linear-gradient(135deg, #fcd34d, #f59e0b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-  }
-
-  .text-academic-md {
-    font-size: 1.25rem;
-    line-height: 1.4;
-    font-weight: 500;
-    color: #1f2937;
-  }
-
-  .dark .text-academic-md {
-    color: #f3f4f6;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  }
-
-  .text-academic-body {
-    font-size: 1rem;
-    line-height: 1.7;
+  .light p, .light span, .light div {
     color: #374151;
   }
 
-  .dark .text-academic-body {
-    color: #e5e7eb;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  /* Light theme specific text classes */
+  .light .text-gray-700 {
+    color: #374151 !important;
   }
 
-  /* Statistics cards for dark theme */
-  .stats-card {
-    background: linear-gradient(145deg, #1e293b 0%, #1a2332 100%);
-    border: 1px solid rgba(245, 158, 11, 0.15);
-    border-radius: 16px;
-    padding: 2rem;
-    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-    box-shadow: 
-      0 4px 16px rgba(0, 0, 0, 0.4),
-      0 1px 4px rgba(0, 0, 0, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  .light .text-gray-900 {
+    color: #111827 !important;
   }
 
-  .stats-card:hover {
-    border-color: rgba(245, 158, 11, 0.3);
-    background: linear-gradient(145deg, #1f2937 0%, #1e293b 100%);
-    transform: translateY(-2px);
-    box-shadow: 
-      0 8px 32px rgba(0, 0, 0, 0.5),
-      0 4px 16px rgba(245, 158, 11, 0.08),
-      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  /* Light theme stats cards */
+  .light .stats-card {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.06);
   }
 
-  .stats-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, #fbbf24, #f59e0b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1;
+  /* Light theme enhanced academic background */
+  .light .academic-bg {
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 50%, #ffffff 100%);
   }
 
-  .stats-label {
-    color: #94a3b8;
-    font-size: 0.875rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-top: 0.5rem;
+  .light .academic-bg::before {
+    background: radial-gradient(circle at 20% 50%, rgba(251, 191, 36, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(245, 158, 11, 0.035) 0%, transparent 50%);
   }
 
-  /* Dark theme hero section */
-  .dark .hero-section {
-    background: linear-gradient(145deg, #0f172a 0%, #1e293b 25%, #334155 50%, #1e293b 75%, #0f1629 100%);
-    position: relative;
-    overflow: hidden;
+  /* Professional light theme hero section */
+  .light .hero-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 50%, #ffffff 100%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
 
-  .dark .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(circle at 20% 50%, rgba(245, 158, 11, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
-    pointer-events: none;
+  /* Default light theme styles (when no specific class is applied) */
+  html:not(.dark) .academic-card {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.06);
   }
 
-  .dark .hero-title {
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  html:not(.dark) .academic-card:hover {
+    border-color: #f59e0b;
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15), 
+                0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
   }
 
-  .dark .hero-description {
-    color: #cbd5e1;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  html:not(.dark) .content-section {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.06);
   }
 
-  /* Loading animation */
-  .loading-dots {
-    display: inline-block;
+  /* Enhanced readability for light theme */
+  html:not(.dark) .text-gray-700 {
+    color: #374151 !important;
   }
 
-  .loading-dots::after {
-    content: '';
-    animation: dots 1.5s steps(5, end) infinite;
+  html:not(.dark) .text-gray-800 {
+    color: #1f2937 !important;
   }
 
-  @keyframes dots {
-    0%, 20% {
-      content: '';
-    }
-    40% {
-      content: '.';
-    }
-    60% {
-      content: '..';
-    }
-    80%, 100% {
-      content: '...';
-    }
+  html:not(.dark) .text-gray-900 {
+    color: #111827 !important;
   }
 
-  /* Override any timeline element borders to prevent black borders */
-  .timeline-event-card * {
-    border-color: #fbbf24 !important;
+  /* Professional card shadows for light theme */
+  html:not(.dark) .hover\:shadow-lg:hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12), 0 6px 16px rgba(0, 0, 0, 0.08) !important;
   }
 
-  .timeline-event-card *:hover {
-    border-color: #f59e0b !important;
+  /* Enhanced button visibility for light theme */
+  html:not(.dark) .bg-orange-600 {
+    background-color: #ea580c !important;
+    color: white !important;
   }
 
-  .timeline-event-card *:focus {
-    border-color: #f59e0b !important;
-    outline: none !important;
+  html:not(.dark) .bg-orange-600:hover {
+    background-color: #c2410c !important;
   }
 
-  /* Nuclear option: Override ALL border colors in timeline cards */
-  .timeline-event-card *,
-  .timeline-event-card *:before,
-  .timeline-event-card *:after,
-  .timeline-event-card *:focus,
-  .timeline-event-card *:hover,
-  .timeline-event-card *:active {
-    border-color: #fbbf24 !important;
-    outline: none !important;
+  html:not(.dark) .text-orange-600 {
+    color: #ea580c !important;
   }
 
-  .timeline-event-card:hover *,
-  .timeline-event-card:hover *:before,
-  .timeline-event-card:hover *:after,
-  .timeline-event-card:hover *:focus,
-  .timeline-event-card:hover *:hover,
-  .timeline-event-card:hover *:active {
-    border-color: #f59e0b !important;
-    outline: none !important;
+  html:not(.dark) .border-orange-600 {
+    border-color: #ea580c !important;
   }
 
-  /* Map popup styles */
-  .custom-popup .leaflet-popup-content-wrapper {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(245, 158, 11, 0.1);
-    border: 1px solid rgba(245, 158, 11, 0.2);
-    pointer-events: auto; /* Ensure wrapper can receive mouse events */
-    cursor: default; /* Show default cursor on popup */
+  /* Professional spacing and typography for light theme */
+  html:not(.dark) .serif-text {
+    color: #374151;
+    line-height: 1.6;
   }
 
-  .custom-popup .leaflet-popup-content {
-    margin: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3 {
+    color: #111827 !important;
+    font-weight: 600;
   }
 
-  .custom-popup .leaflet-popup-tip {
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(245, 158, 11, 0.2);
-    border-top: none;
-    border-right: none;
+  /* Enhanced navbar styling for light theme */
+  html:not(.dark) nav {
+    background: rgba(249, 250, 251, 0.98) !important;
+    border-bottom: 1px solid #d1d5db !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06) !important;
   }
 
-  .custom-popup .leaflet-popup-close-button {
-    color: #d97706;
-    font-size: 18px;
-    font-weight: bold;
+  html:not(.dark) nav .text-gray-800 {
+    color: #1f2937 !important;
   }
 
-  .custom-popup .leaflet-popup-close-button:hover {
-    color: #92400e;
+  html:not(.dark) nav .text-orange-700 {
+    color: #c2410c !important;
   }
 
-  /* Prevent marker shaking and improve stability */
-  .leaflet-3d-marker {
-    transition: all 0.2s ease !important;
-    transform-origin: center center !important;
+  html:not(.dark) nav .hover\:text-orange-700:hover {
+    color: #c2410c !important;
   }
 
-  .leaflet-marker-icon, .leaflet-div-icon {
-    transition: transform 0.2s ease !important;
+  html:not(.dark) nav .bg-orange-50 {
+    background-color: #fff7ed !important;
   }
 
-  /* Smooth popup animations */
-  .leaflet-popup {
-    animation: fadeInUp 0.3s ease-out;
-    pointer-events: auto; /* Ensure popup can receive mouse events */
+  html:not(.dark) nav .border-orange-200 {
+    border-color: #fed7aa !important;
   }
 
-  /* Improve hovercard behavior */
-  .leaflet-popup-pane {
-    pointer-events: auto !important;
+  html:not(.dark) nav .hover\:bg-orange-50:hover {
+    background-color: #fff7ed !important;
   }
 
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translate3d(0, 10px, 0);
-    }
-    to {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-    }
+  /* Professional navbar hover effects for light theme */
+  html:not(.dark) nav a:hover {
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+  }
+
+  html:not(.dark) nav a.active {
+    box-shadow: 0 2px 4px rgba(194, 65, 12, 0.1);
   }
 }
 
@@ -826,4 +711,36 @@
 .leaflet-interactive:hover {
   transform: translateZ(20px) scale(1.05);
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+}
+
+/* Prevent marker shaking and improve stability */
+.leaflet-3d-marker {
+  transition: all 0.2s ease !important;
+  transform-origin: center center !important;
+}
+
+.leaflet-marker-icon, .leaflet-div-icon {
+  transition: transform 0.2s ease !important;
+}
+
+/* Smooth popup animations */
+.leaflet-popup {
+  animation: fadeInUp 0.3s ease-out;
+  pointer-events: auto; /* Ensure popup can receive mouse events */
+}
+
+/* Improve hovercard behavior */
+.leaflet-popup-pane {
+  pointer-events: auto !important;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
