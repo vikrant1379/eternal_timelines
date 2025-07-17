@@ -1,9 +1,11 @@
+
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { BookOpen, Map, Clock, Users, Info, Home } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 const navigation = [
   { name: "Home", href: "/", icon: Home },
@@ -35,8 +37,8 @@ export default function Navbar() {
               </span>
             </div>
           </Link>
-          </div>
 
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => {
               const isActive = pathname === item.href;
@@ -47,8 +49,8 @@ export default function Navbar() {
                   className={cn(
                     "flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors serif-text",
                     isActive
-                      ? "text-amber-700 bg-amber-50 border border-amber-200"
-                      : "text-gray-700 hover:text-amber-700 hover:bg-amber-50",
+                      ? "text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700"
+                      : "text-gray-700 dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-300 hover:bg-amber-50 dark:hover:bg-amber-900/20",
                   )}
                 >
                   <item.icon className="w-4 h-4" />
@@ -58,23 +60,28 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
-            <button className="text-gray-700 hover:text-amber-700">
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
+          {/* Theme Toggle and Mobile Menu */}
+          <div className="flex items-center space-x-4">
+            <ThemeToggle />
+            
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button className="text-gray-700 dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-300">
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
