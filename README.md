@@ -435,8 +435,8 @@ These guidelines ensure professional code quality and maintain the academic them
 ## 📞 Contact
 
 - **Founder**: Vikrant Chaudhary
-- **Email**: [Your Email]
-- **Website**: [Your Website]
+- **Email**: cvikrant462@gmail.com
+- **Website**: https://www.linkedin.com/in/vikrant1379/
 
 ---
 
