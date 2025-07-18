@@ -194,49 +194,231 @@ export default function KnowledgePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Timeline Event Card */}
-          <div className="academic-card p-6 hover:border-transparent transition-all duration-200 hover:shadow-lg">
-            <div className="w-12 h-12 academic-accent rounded-lg flex items-center justify-center mb-4 shadow-lg">
-              <span className="text-white text-xl">📅</span>
+          <div className="academic-card p-8 hover:border-transparent transition-all duration-300 hover:shadow-lg group">
+            <div className="w-16 h-16 academic-accent rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <span className="text-white text-2xl">📅</span>
             </div>
-            <h3 className="text-xl font-semibold text-stone-800 mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>Timeline Event</h3>
-            <p className="text-stone-600 mb-4" style={{ fontFamily: 'Source Serif Pro, serif' }}>Add a new historical event to our timeline</p>
-            <button className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white px-4 py-2 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md" style={{ fontFamily: 'Source Serif Pro, serif' }}>
+            <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-300 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>Timeline Event</h3>
+            <p className="text-stone-700 dark:text-gray-300 mb-6 serif-text leading-relaxed">Add a new historical event to our timeline with detailed historical context</p>
+            <button className="btn-academic w-full justify-center" style={{ fontFamily: 'Source Serif Pro, serif' }}>
               Add Event
             </button>
           </div>
 
           {/* Article Card */}
-          <div className="academic-card p-6 hover:border-transparent transition-all duration-200 hover:shadow-lg">
-            <div className="w-12 h-12 academic-accent rounded-lg flex items-center justify-center mb-4 shadow-lg">
-              <span className="text-white text-xl">📄</span>
+          <div className="academic-card p-8 hover:border-transparent transition-all duration-300 hover:shadow-lg group">
+            <div className="w-16 h-16 academic-accent rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <span className="text-white text-2xl">📄</span>
             </div>
-            <h3 className="text-xl font-semibold text-stone-800 mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>Article</h3>
-            <p className="text-stone-600 mb-4" style={{ fontFamily: 'Source Serif Pro, serif' }}>Write an in-depth article about a topic</p>
-            <button className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white px-4 py-2 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md" style={{ fontFamily: 'Source Serif Pro, serif' }}>
+            <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-300 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>Article</h3>
+            <p className="text-stone-700 dark:text-gray-300 mb-6 serif-text leading-relaxed">Write an in-depth article about a topic with scholarly research and references</p>
+            <button className="btn-academic w-full justify-center" style={{ fontFamily: 'Source Serif Pro, serif' }}>
               Write Article
             </button>
           </div>
 
           {/* Fact Check Card */}
-          <div className="academic-card p-6 hover:border-transparent transition-all duration-200 hover:shadow-lg">
-            <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4 shadow-lg">
-              <span className="text-white text-xl">✓</span>
+          <div className="academic-card p-8 hover:border-transparent transition-all duration-300 hover:shadow-lg group">
+            <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <span className="text-white text-2xl">✓</span>
             </div>
-            <h3 className="text-xl font-semibold text-stone-800 mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>Fact Check</h3>
-            <p className="text-stone-600 mb-4" style={{ fontFamily: 'Source Serif Pro, serif' }}>Verify or correct existing information</p>
-            <button className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white px-4 py-2 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md" style={{ fontFamily: 'Source Serif Pro, serif' }}>
+            <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-300 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>Fact Check</h3>
+            <p className="text-stone-700 dark:text-gray-300 mb-6 serif-text leading-relaxed">Verify or correct existing information with credible sources and evidence</p>
+            <button className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white px-6 py-3 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md w-full justify-center inline-flex items-center font-medium" style={{ fontFamily: 'Source Serif Pro, serif' }}>
               Fact Check
             </button>
           </div>
         </div>
         </div>
 
+        {/* Timeline Event Form */}
+        <div className="mb-16">
+          <div className="academic-card p-10 max-w-4xl mx-auto">
+            <div className="mb-8 text-center">
+              <div className="w-20 h-20 academic-accent rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <span className="text-white text-3xl">📅</span>
+              </div>
+              <h2 className="text-3xl font-bold text-stone-900 dark:text-amber-300 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                Add Timeline Event
+              </h2>
+              <p className="text-stone-700 dark:text-gray-300 serif-text text-lg">
+                Contribute a significant historical event to our comprehensive timeline
+              </p>
+            </div>
+            
+            <form className="space-y-8">
+              {/* Title */}
+              <div className="space-y-3">
+                <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
+                  Title <span className="text-amber-600">*</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter the title of the event, article, or fact check"
+                  className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
+                />
+              </div>
+
+              {/* Description */}
+              <div className="space-y-3">
+                <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
+                  Description <span className="text-amber-600">*</span>
+                </label>
+                <textarea
+                  rows={5}
+                  placeholder="Provide a detailed description..."
+                  className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200 resize-vertical"
+                />
+              </div>
+
+              {/* Year and Category Row */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
+                    Year <span className="text-amber-600">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="e.g., 1500 for 1500 BCE, 1947 for 1947 CE"
+                    className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
+                  />
+                </div>
+                
+                <div className="space-y-3">
+                  <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
+                    Category <span className="text-amber-600">*</span>
+                  </label>
+                  <select className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200">
+                    <option value="">Select a category</option>
+                    <option value="religious">Religious</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="political">Political</option>
+                    <option value="social">Social</option>
+                    <option value="philosophical">Philosophical</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Location and Importance Row */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
+                    Location
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="e.g., Delhi, India"
+                    className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
+                  />
+                </div>
+                
+                <div className="space-y-3">
+                  <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
+                    Importance
+                  </label>
+                  <select className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200">
+                    <option value="">Select importance level</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                    <option value="critical">Critical</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Tags and Sources Row */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
+                    Tags
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="e.g., hinduism, vedas, philosophy (comma separated)"
+                    className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
+                  />
+                </div>
+                
+                <div className="space-y-3">
+                  <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
+                    Sources
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="e.g., Ancient texts, Archaeological findings"
+                    className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
+                  />
+                </div>
+              </div>
+
+              {/* Submit Button */}
+              <div className="pt-6 border-t border-stone-200 dark:border-gray-600">
+                <button
+                  type="submit"
+                  className="btn-academic px-8 py-4 text-lg font-semibold w-full md:w-auto md:mx-auto block"
+                  style={{ fontFamily: 'Source Serif Pro, serif' }}
+                >
+                  Submit Contribution
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        {/* Contribution Guidelines */}
+        <div className="mb-16">
+          <div className="mission-card p-10 rounded-xl">
+            <div className="text-center mb-8">
+              <h2 className="mission-title text-3xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                Contribution Guidelines
+              </h2>
+              <p className="mission-text text-lg serif-text">
+                Help us maintain the highest standards of scholarly accuracy and cultural sensitivity
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white text-xl">📚</span>
+                </div>
+                <h4 className="font-bold text-stone-900 dark:text-amber-200 mb-2">Research</h4>
+                <p className="text-sm mission-text">Cite credible sources and provide historical context</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white text-xl">🔍</span>
+                </div>
+                <h4 className="font-bold text-stone-900 dark:text-amber-200 mb-2">Accuracy</h4>
+                <p className="text-sm mission-text">Verify information through multiple reliable sources</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white text-xl">🙏</span>
+                </div>
+                <h4 className="font-bold text-stone-900 dark:text-amber-200 mb-2">Respect</h4>
+                <p className="text-sm mission-text">Maintain cultural sensitivity and scholarly objectivity</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white text-xl">✨</span>
+                </div>
+                <h4 className="font-bold text-stone-900 dark:text-amber-200 mb-2">Quality</h4>
+                <p className="text-sm mission-text">Use clear, professional language and proper formatting</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Ready to Explore More?
           </h2>
-          <p className="text-xl text-gray-600 mb-8 serif-text">
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 serif-text">
             Join our community of learners and contribute to preserving this ancient wisdom.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
