@@ -78,7 +78,7 @@ export default function AboutPage() {
         </div>
 
         {/* Mission */}
-        <div className="mission-card mb-12 py-12 px-8 text-center">
+        <div className="mission-card mb-12 py-12 px-8 text-center rounded-[10px]">
           <Target className="w-16 h-16 mx-auto mb-6 text-amber-800 dark:text-amber-400" />
           <h2 className="mission-title text-4xl mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Our Mission

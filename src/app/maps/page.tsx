@@ -207,7 +207,7 @@ export default function MapsPage() {
         </div>
 
         {/* Category Filters */}
-        <div className="content-section mb-12">
+        <div className="content-section mb-12 rounded-[10px] p-5">
           <h3 className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>Filter by Category</h3>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {categories.map((category) => (
@@ -249,7 +249,7 @@ export default function MapsPage() {
         </div>
 
         {/* Events with Locations */}
-        <div className="content-section">
+        <div className="content-section rounded-[10px] p-5">
           <h3 className="text-2xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Historical Events with Locations ({filteredEvents.length})
           </h3>
@@ -285,7 +285,7 @@ export default function MapsPage() {
         </div>
 
         {/* Statistics */}
-        <div className="content-section bg-gradient-to-br from-amber-600 to-orange-700 text-white mt-12">
+        <div className="content-section bg-gradient-to-br from-amber-600 to-orange-700 text-white mt-12 rounded-[10px] p-5">
           <h3 className="text-2xl font-bold mb-6 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>Geographic Statistics</h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             <div>
