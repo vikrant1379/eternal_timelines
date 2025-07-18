@@ -111,7 +111,7 @@ export default function ContributePage() {
         </div>
 
         {/* Form */}
-        <div className="content-section">
+        <div className="content-section rounded-[10px] p-5">
           <h2 className="text-2xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             {activeTab === 'timeline' && 'Add Timeline Event'}
             {activeTab === 'article' && 'Write Article'}
@@ -257,7 +257,7 @@ export default function ContributePage() {
         </div>
 
         {/* Guidelines */}
-        <div className="mission-card mt-12 p-8">
+        <div className="mission-card mt-12 rounded-[10px] p-5">
           <h3 className="mission-title text-3xl text-center mb-8" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Contribution Guidelines
           </h3>

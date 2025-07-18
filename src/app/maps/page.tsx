@@ -285,7 +285,7 @@ export default function MapsPage() {
         </div>
 
         {/* Statistics */}
-        <div className="content-section bg-gradient-to-br from-amber-600 to-orange-700 text-white mt-12 rounded-[10px] p-5">
+        <div className="content-section bg-gradient-to-br from-amber-600 to-orange-700 text-white mt-12 rounded-[10px] p-10">
           <h3 className="text-2xl font-bold mb-6 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>Geographic Statistics</h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             <div>
