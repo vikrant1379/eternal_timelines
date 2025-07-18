@@ -111,31 +111,35 @@ export default function KnowledgePage() {
 
         {/* Featured Sacred Texts */}
         <div className="content-section mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-gray-100 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Featured Sacred Texts
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredTexts.map((text, index) => (
               <div
                 key={text.title}
-                className="academic-card p-6 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border-t-4 border-amber-600 hover:shadow-lg transition-all duration-300"
+                className="academic-card p-6 hover:shadow-lg transition-all duration-300"
               >
-                <div className={`w-10 h-10 bg-gradient-to-br ${index === 0 ? 'from-amber-500 to-orange-600' : index === 1 ? 'from-orange-500 to-amber-600' : 'from-amber-600 to-orange-500'} rounded-lg flex items-center justify-center mb-4 shadow-md`}>
-                  <BookOpen className="w-5 h-5 text-white" />
+                <div className="bg-amber-600 text-white p-2 rounded-lg mr-4">
+                  <BookOpen className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-amber-300 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>{text.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 serif-text leading-relaxed">{text.description}</p>
-                <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400 serif-text">
+                <h3 className="text-xl font-bold text-stone-900" style={{ fontFamily: 'Playfair Display, serif' }}>{text.title}</h3>
+                
+                <p className="text-stone-700 serif-text">
+                  {text.description}
+                </p>
+                
+                <div className="space-y-3 text-sm text-stone-700 serif-text">
                   <div className="flex justify-between">
-                    <span className="font-medium text-gray-800 dark:text-gray-200">Period:</span>
+                    <span className="font-medium">Period:</span>
                     <span>{text.period}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="font-medium text-gray-800 dark:text-gray-200">Chapters:</span>
+                    <span className="font-medium">Chapters:</span>
                     <span>{text.chapters}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="font-medium text-gray-800 dark:text-gray-200">Verses:</span>
+                    <span className="font-medium">Verses:</span>
                     <span>{text.verses}</span>
                   </div>
                 </div>
@@ -146,62 +150,37 @@ export default function KnowledgePage() {
 
         {/* Learning Path */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-gray-100 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Begin Your Learning Journey
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="academic-card p-8 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border-l-4 border-amber-600">
+            {/* For Beginners */}
+            <div className="academic-card p-8 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mr-4 shadow-md">
-                  <Lightbulb className="w-6 h-6 text-white" />
+                <div className="bg-amber-600 text-white p-3 rounded-lg mr-4">
+                  <Lightbulb className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-amber-300" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-                  For Beginners
-                </h3>
+                <h3 className="text-2xl font-bold text-stone-900" style={{ fontFamily: 'Playfair Display, serif' }}>For Beginners</h3>
               </div>
-              <p className="text-gray-600 dark:text-gray-300 mb-6 serif-text">
-                Start your spiritual journey with foundational concepts and accessible teachings.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start text-gray-700 dark:text-gray-300 serif-text">
-                  <div className="w-2 h-2 bg-gradient-to-r from-amber-600 to-orange-700 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <span>Start with the basics of Dharma and Karma</span>
-                </li>
-                <li className="flex items-start text-gray-700 dark:text-gray-300 serif-text">
-                  <div className="w-2 h-2 bg-gradient-to-r from-amber-600 to-orange-700 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <span>Read simplified versions of sacred texts</span>
-                </li>
-                <li className="flex items-start text-gray-700 dark:text-gray-300 serif-text">
-                  <div className="w-2 h-2 bg-gradient-to-r from-amber-600 to-orange-700 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <span>Practice basic meditation techniques</span>
-                </li>
+              <ul className="space-y-4 text-stone-700 serif-text">
+                <li>Start with the basics of Dharma and Karma</li>
+                <li>Read simplified versions of sacred texts</li>
+                <li>Practice basic meditation techniques</li>
               </ul>
             </div>
-            <div className="academic-card p-8 bg-gradient-to-br from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20 border-l-4 border-orange-600">
+
+            {/* For Advanced Learners */}
+            <div className="academic-card p-8 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-600 rounded-xl flex items-center justify-center mr-4 shadow-md">
-                  <BookOpen className="w-6 h-6 text-white" />
+                <div className="bg-amber-600 text-white p-3 rounded-lg mr-4">
+                  <BookOpen className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-amber-300" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-                  For Advanced Learners
-                </h3>
+                <h3 className="text-2xl font-bold text-stone-900" style={{ fontFamily: 'Playfair Display, serif' }}>For Advanced Learners</h3>
               </div>
-              <p className="text-gray-600 dark:text-gray-300 mb-6 serif-text">
-                Deepen your understanding through original texts and advanced spiritual practices.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start text-gray-700 dark:text-gray-300 serif-text">
-                  <div className="w-2 h-2 bg-gradient-to-r from-orange-600 to-amber-700 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <span>Study original Sanskrit texts</span>
-                </li>
-                <li className="flex items-start text-gray-700 dark:text-gray-300 serif-text">
-                  <div className="w-2 h-2 bg-gradient-to-r from-orange-600 to-amber-700 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <span>Deep dive into philosophical concepts</span>
-                </li>
-                <li className="flex items-start text-gray-700 dark:text-gray-300 serif-text">
-                  <div className="w-2 h-2 bg-gradient-to-r from-orange-600 to-amber-700 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <span>Explore advanced spiritual practices</span>
-                </li>
+              <ul className="space-y-4 text-stone-700 serif-text">
+                <li>Study original Sanskrit texts</li>
+                <li>Deep dive into philosophical concepts</li>
+                <li>Explore advanced spiritual practices</li>
               </ul>
             </div>
           </div>
@@ -235,4 +214,4 @@ export default function KnowledgePage() {
       </div>
     </div>
   );
-} 
+}
