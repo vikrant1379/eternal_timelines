@@ -124,11 +124,11 @@ export default function KnowledgePage() {
                   <BookOpen className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-stone-900" style={{ fontFamily: 'Playfair Display, serif' }}>{text.title}</h3>
-                
+
                 <p className="text-stone-700 serif-text">
                   {text.description}
                 </p>
-                
+
                 <div className="space-y-3 text-sm text-stone-700 serif-text">
                   <div className="flex justify-between">
                     <span className="font-medium">Period:</span>
@@ -184,6 +184,51 @@ export default function KnowledgePage() {
               </ul>
             </div>
           </div>
+        </div>
+
+         {/* Contribute Section */}
+         <div className="mb-16">
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-gray-100 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+            Contribute to the Knowledge
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Timeline Event Card */}
+          <div className="academic-card p-6 hover:border-transparent transition-all duration-200 hover:shadow-lg">
+            <div className="w-12 h-12 academic-accent rounded-lg flex items-center justify-center mb-4 shadow-lg">
+              <span className="text-white text-xl">📅</span>
+            </div>
+            <h3 className="text-xl font-semibold text-stone-800 mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>Timeline Event</h3>
+            <p className="text-stone-600 mb-4" style={{ fontFamily: 'Source Serif Pro, serif' }}>Add a new historical event to our timeline</p>
+            <button className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white px-4 py-2 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md" style={{ fontFamily: 'Source Serif Pro, serif' }}>
+              Add Event
+            </button>
+          </div>
+
+          {/* Article Card */}
+          <div className="academic-card p-6 hover:border-transparent transition-all duration-200 hover:shadow-lg">
+            <div className="w-12 h-12 academic-accent rounded-lg flex items-center justify-center mb-4 shadow-lg">
+              <span className="text-white text-xl">📄</span>
+            </div>
+            <h3 className="text-xl font-semibold text-stone-800 mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>Article</h3>
+            <p className="text-stone-600 mb-4" style={{ fontFamily: 'Source Serif Pro, serif' }}>Write an in-depth article about a topic</p>
+            <button className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white px-4 py-2 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md" style={{ fontFamily: 'Source Serif Pro, serif' }}>
+              Write Article
+            </button>
+          </div>
+
+          {/* Fact Check Card */}
+          <div className="academic-card p-6 hover:border-transparent transition-all duration-200 hover:shadow-lg">
+            <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4 shadow-lg">
+              <span className="text-white text-xl">✓</span>
+            </div>
+            <h3 className="text-xl font-semibold text-stone-800 mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>Fact Check</h3>
+            <p className="text-stone-600 mb-4" style={{ fontFamily: 'Source Serif Pro, serif' }}>Verify or correct existing information</p>
+            <button className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white px-4 py-2 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md" style={{ fontFamily: 'Source Serif Pro, serif' }}>
+              Fact Check
+            </button>
+          </div>
+        </div>
         </div>
 
         {/* Call to Action */}
