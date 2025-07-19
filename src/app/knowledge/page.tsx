@@ -359,11 +359,11 @@ export default function KnowledgePage() {
               profound insights for modern living and spiritual growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/timeline" className="btn-academic">
+              <Link href="/timeline" className="btn-academic from-amber-600 to-orange-600">
                 Explore Historical Timeline
                 <Clock className="ml-2 w-4 h-4" />
               </Link>
-              <Link href="/contribute" className="btn-academic bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white border-none shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+              <Link href="/contribute" className="btn-academic from-orange-700 to-amber-700">
                 Share Your Knowledge
                 <Heart className="ml-2 w-4 h-4" />
               </Link>
