@@ -181,11 +181,50 @@
     box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2) !important;
   }
 
+  /* Enhanced form input styling for better visibility */
+  input, textarea, select {
+    background: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+    color: #1f2937 !important;
+    transition: all 0.2s ease !important;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #6b7280 !important;
+    opacity: 1 !important;
+  }
+
+  .dark input, .dark textarea, .dark select {
+    background: #374151 !important;
+    border: 1px solid #4b5563 !important;
+    color: #f9fafb !important;
+  }
+
+  .dark input::placeholder, .dark textarea::placeholder {
+    color: #9ca3af !important;
+    opacity: 1 !important;
+  }
+
+  /* Form labels styling */
+  label {
+    color: #374151 !important;
+    font-weight: 500 !important;
+  }
+
+  .dark label {
+    color: #e5e7eb !important;
+  }
+
   /* Ensure input fields use theme colors */
-  input:focus {
+  input:focus, textarea:focus, select:focus {
     outline: none !important;
     border-color: #f59e0b !important;
     box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2) !important;
+  }
+
+  .dark input:focus, .dark textarea:focus, .dark select:focus {
+    border-color: #fbbf24 !important;
+    box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2) !important;
   }
 
   /* Timeline specific button styling */
@@ -548,6 +587,68 @@
 
   .light p, .light span, .light div {
     color: #1f2937 !important;
+  }
+
+  /* Comprehensive form styling for contribute page */
+  .contribute-form input,
+  .contribute-form textarea,
+  .contribute-form select {
+    background: #ffffff !important;
+    border: 2px solid #d1d5db !important;
+    color: #111827 !important;
+    font-size: 1rem !important;
+    padding: 0.75rem !important;
+    border-radius: 0.5rem !important;
+    width: 100% !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .contribute-form input::placeholder,
+  .contribute-form textarea::placeholder {
+    color: #6b7280 !important;
+    opacity: 1 !important;
+    font-size: 0.95rem !important;
+  }
+
+  .dark .contribute-form input,
+  .dark .contribute-form textarea,
+  .dark .contribute-form select {
+    background: #374151 !important;
+    border: 2px solid #6b7280 !important;
+    color: #f9fafb !important;
+  }
+
+  .dark .contribute-form input::placeholder,
+  .dark .contribute-form textarea::placeholder {
+    color: #d1d5db !important;
+    opacity: 1 !important;
+  }
+
+  .contribute-form label {
+    color: #374151 !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+  }
+
+  .dark .contribute-form label {
+    color: #f3f4f6 !important;
+  }
+
+  .contribute-form input:focus,
+  .contribute-form textarea:focus,
+  .contribute-form select:focus {
+    border-color: #f59e0b !important;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1) !important;
+    outline: none !important;
+  }
+
+  .dark .contribute-form input:focus,
+  .dark .contribute-form textarea:focus,
+  .dark .contribute-form select:focus {
+    border-color: #fbbf24 !important;
+    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1) !important;
   }
 
   /* Light theme specific text classes */
