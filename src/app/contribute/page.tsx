@@ -80,10 +80,10 @@ export default function ContributePage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h1 className="text-4xl font-bold text-stone-900 dark:text-amber-100 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Contribute to Sanatan Timeline
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto serif-text">
+          <p className="text-xl text-stone-700 dark:text-amber-200 max-w-3xl mx-auto serif-text">
             Help us preserve and expand the knowledge of Indian civilization. Your contributions 
             will help future generations understand our rich heritage.
           </p>
@@ -104,15 +104,15 @@ export default function ContributePage() {
               <div className={`w-12 h-12 bg-gradient-to-br ${type.color} rounded-lg flex items-center justify-center mb-4 shadow-md`}>
                 <type.icon className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>{type.title}</h3>
-              <p className="text-gray-600 serif-text">{type.description}</p>
+              <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100 mb-2" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>{type.title}</h3>
+              <p className="text-stone-700 dark:text-amber-200 serif-text">{type.description}</p>
             </button>
           ))}
         </div>
 
         {/* Form */}
         <div className="content-section rounded-[10px] p-5">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h2 className="text-2xl font-bold text-stone-900 dark:text-amber-100 mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             {activeTab === 'timeline' && 'Add Timeline Event'}
             {activeTab === 'article' && 'Write Article'}
             {activeTab === 'fact-check' && 'Fact Check'}
@@ -121,7 +121,7 @@ export default function ContributePage() {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Title */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2 serif-text">
+              <label className="block text-sm font-medium text-stone-700 dark:text-amber-200 mb-2 serif-text">
                 Title *
               </label>
               <input
@@ -136,7 +136,7 @@ export default function ContributePage() {
 
             {/* Description */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2 serif-text">
+              <label className="block text-sm font-medium text-stone-700 dark:text-amber-200 mb-2 serif-text">
                 Description *
               </label>
               <textarea
@@ -152,7 +152,7 @@ export default function ContributePage() {
             {/* Year and Category */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 serif-text">
+                <label className="block text-sm font-medium text-stone-700 dark:text-amber-200 mb-2 serif-text">
                   Year *
                 </label>
                 <input
@@ -165,7 +165,7 @@ export default function ContributePage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 serif-text">
+                <label className="block text-sm font-medium text-stone-700 dark:text-amber-200 mb-2 serif-text">
                   Category *
                 </label>
                 <select
@@ -187,7 +187,7 @@ export default function ContributePage() {
             {/* Location and Importance */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 serif-text">
+                <label className="block text-sm font-medium text-stone-700 dark:text-amber-200 mb-2 serif-text">
                   Location
                 </label>
                 <input
@@ -199,7 +199,7 @@ export default function ContributePage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 serif-text">
+                <label className="block text-sm font-medium text-stone-700 dark:text-amber-200 mb-2 serif-text">
                   Importance
                 </label>
                 <select
@@ -218,7 +218,7 @@ export default function ContributePage() {
             {/* Tags and Sources */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 serif-text">
+                <label className="block text-sm font-medium text-stone-700 dark:text-amber-200 mb-2 serif-text">
                   Tags
                 </label>
                 <input
@@ -230,7 +230,7 @@ export default function ContributePage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 serif-text">
+                <label className="block text-sm font-medium text-stone-700 dark:text-amber-200 mb-2 serif-text">
                   Sources
                 </label>
                 <input
