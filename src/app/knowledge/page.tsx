@@ -225,20 +225,20 @@ export default function KnowledgePage() {
                   </div>
 
                   <div className="space-y-4">
-                    <div className="bg-stone-100 dark:bg-gray-800 p-4 rounded-lg">
+                    <div className="bg-amber-50 dark:bg-gray-800 border border-amber-200 dark:border-gray-700 p-4 rounded-lg">
                       <h4 className="font-semibold text-stone-900 dark:text-amber-200 mb-3">Details</h4>
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
-                          <span className="text-stone-600 dark:text-gray-400">Period:</span>
-                          <span className="text-stone-800 dark:text-gray-200">{text.period}</span>
+                          <span className="text-stone-700 dark:text-gray-400 font-medium">Period:</span>
+                          <span className="text-stone-900 dark:text-gray-200 font-semibold">{text.period}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-stone-600 dark:text-gray-400">Chapters:</span>
-                          <span className="text-stone-800 dark:text-gray-200">{text.chapters}</span>
+                          <span className="text-stone-700 dark:text-gray-400 font-medium">Chapters:</span>
+                          <span className="text-stone-900 dark:text-gray-200 font-semibold">{text.chapters}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-stone-600 dark:text-gray-400">Verses:</span>
-                          <span className="text-stone-800 dark:text-gray-200">{text.verses}</span>
+                          <span className="text-stone-700 dark:text-gray-400 font-medium">Verses:</span>
+                          <span className="text-stone-900 dark:text-gray-200 font-semibold">{text.verses}</span>
                         </div>
                       </div>
                     </div>
