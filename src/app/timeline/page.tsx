@@ -10,7 +10,7 @@ export default function TimelinePage() {
           <h1 className="text-4xl font-bold text-stone-900 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
             Interactive Timeline
           </h1>
-          <p className="text-xl text-stone-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'Source Serif Pro, serif' }}>
+          <p className="text-xl text-gray-800 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'Source Serif Pro, serif' }}>
             Explore the rich tapestry of Indian civilization through an interactive timeline spanning thousands of years. 
             From ancient scriptures to modern reforms, discover the eternal threads that connect our past to the present.
           </p>
