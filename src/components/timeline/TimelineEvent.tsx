@@ -13,8 +13,8 @@ export default function TimelineEvent({ event, onClick, isSelected }: TimelineEv
     <div
       className={`relative p-6 rounded-xl border cursor-pointer transition-all duration-200 h-80 flex flex-col ${
         isSelected 
-          ? 'border-amber-300 bg-gradient-to-br from-amber-50 to-orange-50 shadow-lg' 
-          : 'border-amber-100 bg-gradient-to-br from-white to-amber-25 hover:border-amber-200 hover:shadow-md'
+          ? 'border-amber-300 dark:border-amber-500 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 shadow-lg' 
+          : 'border-amber-100 dark:border-amber-700/50 bg-gradient-to-br from-white to-amber-25 dark:from-slate-800 dark:to-slate-700 hover:border-amber-200 dark:hover:border-amber-600 hover:shadow-md'
       } backdrop-blur-sm`}
       onClick={() => onClick(event)}
     >
@@ -31,11 +31,16 @@ export default function TimelineEvent({ event, onClick, isSelected }: TimelineEv
         </div>
       </div>
 
-      {/* Title with better typography */}
-      <h3 className="text-xl font-bold text-stone-900 mb-3 leading-tight line-clamp-2 flex-shrink-0" style={{ fontFamily: 'Playfair Display, serif' }}>{event.title}</h3>
+      {/* Title with better typography and theme-aware colors */}
+      <h3 className="text-xl font-bold text-stone-900 dark:text-stone-100 mb-3 leading-tight line-clamp-2 flex-shrink-0" style={{ fontFamily: 'Playfair Display, serif' }}>{event.title}</h3>
 
-      {/* Description with improved spacing */}
-      <p className="text-stone-700 text-sm mb-4 leading-relaxed line-clamp-3 flex-grow" style={{ fontFamily: 'Source Serif Pro, serif' }}>{event.description}</p>
+      {/* Description with improved spacing and theme-aware colors */}
+      <p className="text-stone-700 dark:text-stone-300 text-sm mb-4 leading-relaxed line-clamp-4 flex-grow" style={{ fontFamily: 'Source Serif Pro, serif' }}>
+        {event.description}
+        {event.description.length > 150 && (
+          <span className="text-amber-600 dark:text-amber-400 font-medium ml-2">Click to read more...</span>
+        )}
+      </p>
 
       {/* Location with enhanced design */}
       {event.location && (

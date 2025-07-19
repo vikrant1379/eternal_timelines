@@ -31,16 +31,6 @@ export default function TimelineInstructions({
           </div>
         </div>
         <div className="flex items-center space-x-2">
-          {selectedEvent && (
-            <div className="flex items-center space-x-2">
-              <div className="text-xs text-emerald-700 font-medium bg-emerald-50 px-2 py-1 rounded border border-emerald-200">
-                📌 {selectedEvent.title} ({formatYear(selectedEvent.year)})
-              </div>
-              <div className="text-xs text-amber-700 font-medium bg-amber-50 px-2 py-1 rounded border border-amber-200 animate-pulse">
-                ⬇️ Details below
-              </div>
-            </div>
-          )}
           <button className="text-amber-700 hover:text-amber-900 transition-colors">
             {isExpanded ? (
               <ChevronUp className="w-4 h-4" />

@@ -26,14 +26,14 @@ export default function TimelineEventDetails({ selectedEvent, onClose }: Timelin
         </h3>
         <button
           onClick={onClose}
-          className="text-stone-400 hover:text-stone-600 text-2xl font-bold px-4 py-2 rounded-xl hover:bg-gradient-to-br hover:from-stone-50 hover:to-stone-25 transition-all duration-200 transform hover:scale-105"
+          className="text-stone-400 dark:text-stone-500 hover:text-stone-600 dark:hover:text-stone-300 text-xl font-normal px-3 py-2 rounded-lg hover:bg-stone-100/50 dark:hover:bg-stone-800/30 transition-all duration-200 group"
           title="Close"
         >
-          ✕
+          <span className="group-hover:rotate-90 transition-transform duration-200">✕</span>
         </button>
       </div>
       
-      <div className="bg-white/60 rounded-xl p-1 shadow-inner backdrop-blur-sm">
+      <div className="bg-amber-200/20 rounded-xl shadow-inner backdrop-blur-sm">
         <TimelineEvent
           event={selectedEvent}
           onClick={() => {}}

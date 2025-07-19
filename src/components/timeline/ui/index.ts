@@ -3,3 +3,4 @@ export { default as TimelineCard } from './TimelineCard';
 export { default as TimelineEventDetails } from './TimelineEventDetails';
 export { default as TimelineEventsGrid } from './TimelineEventsGrid';
 export { default as TimelineStatus } from './TimelineStatus';
+export { default as EventDetailModal } from './EventDetailModal';
