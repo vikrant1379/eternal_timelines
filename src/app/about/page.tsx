@@ -68,10 +68,10 @@ export default function AboutPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h1 className="text-4xl font-bold text-stone-900 dark:text-amber-100 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             About Sanatan Timeline
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto serif-text">
+          <p className="text-xl text-stone-700 dark:text-stone-200 max-w-3xl mx-auto serif-text leading-relaxed">
             Preserving the eternal threads of Indian civilization through technology, 
             education, and community collaboration.
           </p>
@@ -100,33 +100,33 @@ export default function AboutPage() {
               <div className="w-12 h-12 bg-gradient-to-br from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mx-auto mb-4 shadow-md">
                 <value.icon className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>{value.title}</h3>
-              <p className="text-gray-600 serif-text">{value.description}</p>
+              <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100 mb-2" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>{value.title}</h3>
+              <p className="text-stone-700 dark:text-stone-200 serif-text leading-relaxed">{value.description}</p>
             </div>
           ))}
         </div>
 
         {/* Team */}
         <div className="academic-card p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-amber-400 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-amber-200 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Our Team
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {team.map((member) => (
               <div
                 key={member.name}
-                className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-700 dark:to-slate-600 p-6 rounded-xl border border-amber-200 dark:border-amber-600/20"
+                className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-700 dark:to-slate-600 p-6 rounded-xl border border-amber-200 dark:border-amber-600/30"
               >
                 <div className="flex items-center mb-4">
                   <div className="text-4xl mr-4">{member.avatar}</div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-amber-300" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                    <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
                       {member.name}
                     </h3>
-                    <p className="text-amber-700 dark:text-amber-400 font-semibold serif-text">{member.role}</p>
+                    <p className="text-amber-800 dark:text-amber-300 font-semibold serif-text">{member.role}</p>
                   </div>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 serif-text leading-relaxed">{member.description}</p>
+                <p className="text-stone-700 dark:text-stone-200 serif-text leading-relaxed">{member.description}</p>
               </div>
             ))}
           </div>
@@ -134,7 +134,7 @@ export default function AboutPage() {
 
         {/* Features */}
         <div className="academic-card p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-amber-400 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-amber-200 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             What We Offer
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -142,10 +142,10 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <BookOpen className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-amber-300 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+              <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
                 Interactive Timeline
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 serif-text leading-relaxed">
+              <p className="text-stone-700 dark:text-stone-200 serif-text leading-relaxed">
                 Explore thousands of years of history through our interactive, zoomable timeline with detailed event information and contextual insights.
               </p>
             </div>
@@ -153,10 +153,10 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <Globe className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-amber-300 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+              <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
                 Geographic Insights
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 serif-text leading-relaxed">
+              <p className="text-stone-700 dark:text-stone-200 serif-text leading-relaxed">
                 Visualize how historical events and cultural movements spread across the Indian subcontinent through interactive maps.
               </p>
             </div>
@@ -164,10 +164,10 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-amber-300 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+              <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
                 Community Driven
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 serif-text leading-relaxed">
+              <p className="text-stone-700 dark:text-stone-200 serif-text leading-relaxed">
                 Join our growing community of scholars, researchers, and enthusiasts helping to preserve and expand knowledge of Indian heritage.
               </p>
             </div>
@@ -176,16 +176,16 @@ export default function AboutPage() {
 
         {/* FAQs */}
         <div className="academic-card p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-amber-400 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-amber-200 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Frequently Asked Questions
           </h2>
           <div className="space-y-8">
             {faqs.map((faq, index) => (
-              <div key={index} className="border-b border-amber-200 dark:border-amber-600/20 pb-6 last:border-b-0">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-amber-300 mb-3 serif-text" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+              <div key={index} className="border-b border-amber-200 dark:border-amber-600/30 pb-6 last:border-b-0">
+                <h3 className="text-xl font-bold text-stone-800 dark:text-amber-100 mb-4 serif-text" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
                   {faq.question}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 serif-text leading-relaxed">{faq.answer}</p>
+                <p className="text-stone-700 dark:text-stone-200 serif-text leading-relaxed text-base">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -193,10 +193,10 @@ export default function AboutPage() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-amber-100 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Ready to Explore Indian Civilization?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-stone-700 dark:text-stone-200 mb-8 serif-text leading-relaxed">
             Start your journey through thousands of years of history, philosophy, and culture.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
