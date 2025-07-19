@@ -318,9 +318,8 @@
 
   .academic-card:focus-within {
     border-color: #f59e0b;
-    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.12), 
-                0 4px 12px rgba(0, 0, 0, 0.08);
-    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.1), 
+                0 2px 8px rgba(0, 0, 0, 0.06);
     outline: none;
   }
 
@@ -341,8 +340,7 @@
 
   .btn-academic:hover {
     background: #b45309;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.2);
+    box-shadow: 0 3px 8px rgba(217, 119, 6, 0.15);
   }
 
   .btn-secondary {
@@ -368,8 +366,7 @@
     border-color: #f59e0b;
     color: #d97706;
     background: #fef3c7;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.12);
   }
 
   .dark .btn-secondary {
@@ -477,8 +474,7 @@
   }
 
   .mission-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.2), 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
     border-color: #d97706;
   }
 
@@ -486,9 +482,9 @@
     background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #4b5563 100%);
     border-color: rgba(245, 158, 11, 0.35);
     box-shadow: 
-      0 8px 32px rgba(0, 0, 0, 0.4),
-      0 4px 16px rgba(245, 158, 11, 0.12),
-      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      0 6px 24px rgba(0, 0, 0, 0.35),
+      0 2px 12px rgba(245, 158, 11, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
   .mission-card .mission-title {

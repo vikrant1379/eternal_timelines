@@ -139,7 +139,7 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg transition-colors duration-200"></div>
                 <BookOpen className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
@@ -150,7 +150,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg transition-colors duration-200"></div>
                 <Globe className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
@@ -161,7 +161,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg transition-colors duration-200"></div>
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
