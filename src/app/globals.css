@@ -609,11 +609,24 @@
 
   /* Enhanced readability for light theme */
   html:not(.dark) .text-gray-700 {
-    color: #374151 !important;
+    color: #1f2937 !important;
   }
 
   html:not(.dark) .text-gray-800 {
-    color: #1f2937 !important;
+    color: #111827 !important;
+  }
+
+  html:not(.dark) .text-gray-900 {
+    color: #0f172a !important;
+  }
+
+  /* Ensure readable text in all contexts */
+  html:not(.dark) p, html:not(.dark) span, html:not(.dark) div {
+    color: #374151;
+  }
+
+  html:not(.dark) .font-medium {
+    font-weight: 500;
   }
 
   html:not(.dark) .text-gray-900 {
