@@ -380,6 +380,7 @@
   .btn-academic:hover {
     background: #b45309;
     box-shadow: 0 3px 8px rgba(217, 119, 6, 0.15);
+    transform: translateY(-1px);
   }
 
   .btn-secondary {
@@ -830,8 +831,8 @@
 
   .btn-academic.bg-gradient-to-r:hover {
     background: linear-gradient(135deg, #b45309, #c2410c) !important;
-    box-shadow: 0 8px 25px rgba(217, 119, 6, 0.4) !important;
-    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3) !important;
+    transform: translateY(-1px) !important;
   }
 
   .dark .btn-academic.bg-gradient-to-r {
@@ -841,7 +842,8 @@
 
   .dark .btn-academic.bg-gradient-to-r:hover {
     background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
-    box-shadow: 0 8px 30px rgba(245, 158, 11, 0.5) !important;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4) !important;
+    transform: translateY(-1px) !important;
   }
 
   html:not(.dark) .text-orange-600 {
