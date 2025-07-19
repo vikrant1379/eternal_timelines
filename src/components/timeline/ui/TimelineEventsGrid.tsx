@@ -15,12 +15,12 @@ export default function TimelineEventsGrid({
   onEventSelect 
 }: TimelineEventsGridProps) {
   return (
-    <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm backdrop-blur-sm hover:shadow-md transition-all duration-200 dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-700 dark:border-amber-500/20 dark:shadow-xl">
+    <div className="academic-card p-8 backdrop-blur-sm hover:border-transparent">
       <div className="flex items-center mb-6">
-        <div className="w-10 h-10 bg-gray-600 rounded-xl flex items-center justify-center text-white text-lg mr-3 shadow-sm dark:bg-gradient-to-br dark:from-amber-600 dark:to-orange-700">
+        <div className="w-10 h-10 academic-accent rounded-xl flex items-center justify-center text-white text-lg mr-3 shadow-lg">
           📚
         </div>
-        <h3 className="text-2xl font-bold text-gray-800 dark:text-slate-200" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <h3 className="text-2xl font-bold text-stone-900" style={{ fontFamily: 'Playfair Display, serif' }}>
           All Events ({events.length})
         </h3>
       </div>
