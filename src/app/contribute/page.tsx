@@ -128,7 +128,7 @@ export default function ContributePage() {
                 type="text"
                 value={formData.title}
                 onChange={(e) => handleInputChange('title', e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent serif-text"
+                className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
                 placeholder="Enter the title of the event, article, or fact check"
                 required
               />
@@ -143,7 +143,7 @@ export default function ContributePage() {
                 value={formData.description}
                 onChange={(e) => handleInputChange('description', e.target.value)}
                 rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent serif-text"
+                className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
                 placeholder="Provide a detailed description..."
                 required
               />
@@ -159,7 +159,7 @@ export default function ContributePage() {
                   type="number"
                   value={formData.year}
                   onChange={(e) => handleInputChange('year', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent serif-text"
+                  className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
                   placeholder="e.g., -1500 for 1500 BCE, 1947 for 1947 CE"
                   required
                 />
@@ -171,7 +171,7 @@ export default function ContributePage() {
                 <select
                   value={formData.category}
                   onChange={(e) => handleInputChange('category', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent serif-text"
+                  className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
                   required
                 >
                   <option value="">Select a category</option>
@@ -194,7 +194,7 @@ export default function ContributePage() {
                   type="text"
                   value={formData.location}
                   onChange={(e) => handleInputChange('location', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent serif-text"
+                  className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
                   placeholder="e.g., Delhi, India"
                 />
               </div>
@@ -205,7 +205,7 @@ export default function ContributePage() {
                 <select
                   value={formData.importance}
                   onChange={(e) => handleInputChange('importance', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent serif-text"
+                  className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
                 >
                   <option value="low">Low</option>
                   <option value="medium">Medium</option>
@@ -225,7 +225,7 @@ export default function ContributePage() {
                   type="text"
                   value={formData.tags}
                   onChange={(e) => handleInputChange('tags', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent serif-text"
+                  className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
                   placeholder="e.g., hinduism, vedas, philosophy (comma separated)"
                 />
               </div>
@@ -237,7 +237,7 @@ export default function ContributePage() {
                   type="text"
                   value={formData.sources}
                   onChange={(e) => handleInputChange('sources', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent serif-text"
+                  className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
                   placeholder="e.g., Ancient texts, Archaeological findings"
                 />
               </div>
@@ -333,4 +333,4 @@ export default function ContributePage() {
       </div>
     </div>
   );
-} 
+}

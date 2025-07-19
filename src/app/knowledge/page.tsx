@@ -76,10 +76,10 @@ export default function KnowledgePage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h1 className="text-4xl font-bold text-stone-900 dark:text-amber-100 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Knowledge Hub
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto serif-text">
+          <p className="text-xl text-stone-700 dark:text-gray-300 max-w-3xl mx-auto serif-text">
             Dive deep into the timeless wisdom of Sanatan Dharma. Explore sacred texts, 
             philosophical concepts, and spiritual teachings that have guided humanity for millennia.
           </p>
@@ -95,11 +95,11 @@ export default function KnowledgePage() {
               <div className={`w-16 h-16 bg-gradient-to-br ${section.color} rounded-xl flex items-center justify-center mb-6 shadow-md`}>
                 <section.icon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>{section.title}</h3>
-              <p className="text-gray-600 mb-6 serif-text">{section.description}</p>
+              <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-100 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>{section.title}</h3>
+              <p className="text-stone-700 dark:text-gray-300 mb-6 serif-text">{section.description}</p>
               <ul className="space-y-2">
                 {section.topics.map((topic) => (
-                  <li key={topic} className="flex items-center text-gray-700 serif-text">
+                  <li key={topic} className="flex items-center text-stone-700 dark:text-gray-300 serif-text">
                     <div className="w-2 h-2 bg-gradient-to-r from-amber-600 to-orange-700 rounded-full mr-3"></div>
                     {topic}
                   </li>
@@ -118,18 +118,20 @@ export default function KnowledgePage() {
             {featuredTexts.map((text, index) => (
               <div
                 key={text.title}
-                className="academic-card p-6 hover:shadow-lg transition-all duration-300"
+                className="academic-card p-6 transition-all duration-300"
               >
-                <div className="bg-amber-600 text-white p-2 rounded-lg mr-4">
-                  <BookOpen className="w-6 h-6" />
+                <div className="flex items-center mb-4">
+                  <div className="bg-amber-600 text-white p-2 rounded-lg mr-4">
+                    <BookOpen className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100" style={{ fontFamily: 'Playfair Display, serif' }}>{text.title}</h3>
                 </div>
-                <h3 className="text-xl font-bold text-stone-900" style={{ fontFamily: 'Playfair Display, serif' }}>{text.title}</h3>
 
-                <p className="text-stone-700 serif-text">
+                <p className="text-stone-700 dark:text-gray-300 serif-text mb-6">
                   {text.description}
                 </p>
 
-                <div className="space-y-3 text-sm text-stone-700 serif-text">
+                <div className="space-y-3 text-sm text-stone-700 dark:text-gray-300 serif-text">
                   <div className="flex justify-between">
                     <span className="font-medium">Period:</span>
                     <span>{text.period}</span>
@@ -155,14 +157,14 @@ export default function KnowledgePage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* For Beginners */}
-            <div className="academic-card p-8 hover:shadow-lg transition-all duration-300">
+            <div className="academic-card p-8 transition-all duration-300">
               <div className="flex items-center mb-6">
                 <div className="bg-amber-600 text-white p-3 rounded-lg mr-4">
                   <Lightbulb className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-stone-900" style={{ fontFamily: 'Playfair Display, serif' }}>For Beginners</h3>
+                <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-100" style={{ fontFamily: 'Playfair Display, serif' }}>For Beginners</h3>
               </div>
-              <ul className="space-y-4 text-stone-700 serif-text">
+              <ul className="space-y-4 text-stone-700 dark:text-gray-300 serif-text">
                 <li>Start with the basics of Dharma and Karma</li>
                 <li>Read simplified versions of sacred texts</li>
                 <li>Practice basic meditation techniques</li>
@@ -170,14 +172,14 @@ export default function KnowledgePage() {
             </div>
 
             {/* For Advanced Learners */}
-            <div className="academic-card p-8 hover:shadow-lg transition-all duration-300">
+            <div className="academic-card p-8 transition-all duration-300">
               <div className="flex items-center mb-6">
                 <div className="bg-amber-600 text-white p-3 rounded-lg mr-4">
                   <BookOpen className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-stone-900" style={{ fontFamily: 'Playfair Display, serif' }}>For Advanced Learners</h3>
+                <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-100" style={{ fontFamily: 'Playfair Display, serif' }}>For Advanced Learners</h3>
               </div>
-              <ul className="space-y-4 text-stone-700 serif-text">
+              <ul className="space-y-4 text-stone-700 dark:text-gray-300 serif-text">
                 <li>Study original Sanskrit texts</li>
                 <li>Deep dive into philosophical concepts</li>
                 <li>Explore advanced spiritual practices</li>
@@ -194,8 +196,8 @@ export default function KnowledgePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Timeline Event Card */}
-          <div className="academic-card p-8 hover:border-transparent transition-all duration-300 hover:shadow-lg group">
-            <div className="w-16 h-16 academic-accent rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+          <div className="academic-card p-8 transition-all duration-300 group">
+            <div className="w-16 h-16 academic-accent rounded-xl flex items-center justify-center mb-6 shadow-lg transition-transform duration-300">
               <span className="text-white text-2xl">📅</span>
             </div>
             <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-300 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>Timeline Event</h3>
@@ -206,8 +208,8 @@ export default function KnowledgePage() {
           </div>
 
           {/* Article Card */}
-          <div className="academic-card p-8 hover:border-transparent transition-all duration-300 hover:shadow-lg group">
-            <div className="w-16 h-16 academic-accent rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+          <div className="academic-card p-8 transition-all duration-300 group">
+            <div className="w-16 h-16 academic-accent rounded-xl flex items-center justify-center mb-6 shadow-lg transition-transform duration-300">
               <span className="text-white text-2xl">📄</span>
             </div>
             <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-300 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>Article</h3>
@@ -218,8 +220,8 @@ export default function KnowledgePage() {
           </div>
 
           {/* Fact Check Card */}
-          <div className="academic-card p-8 hover:border-transparent transition-all duration-300 hover:shadow-lg group">
-            <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+          <div className="academic-card p-8 transition-all duration-300 group">
+            <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 shadow-lg transition-transform duration-300">
               <span className="text-white text-2xl">✓</span>
             </div>
             <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-300 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>Fact Check</h3>
@@ -415,10 +417,10 @@ export default function KnowledgePage() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-amber-100 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Ready to Explore More?
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 serif-text">
+          <p className="text-xl text-stone-700 dark:text-gray-300 mb-8 serif-text">
             Join our community of learners and contribute to preserving this ancient wisdom.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
