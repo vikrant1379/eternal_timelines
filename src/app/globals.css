@@ -831,7 +831,7 @@
 
   .btn-academic.bg-gradient-to-r:hover {
     background: linear-gradient(135deg, #b45309, #c2410c) !important;
-    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3) !important;
+    box-shadow: 0 3px 8px rgba(217, 119, 6, 0.15) !important;
     transform: translateY(-1px) !important;
   }
 
@@ -842,7 +842,7 @@
 
   .dark .btn-academic.bg-gradient-to-r:hover {
     background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
-    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4) !important;
+    box-shadow: 0 3px 8px rgba(245, 158, 11, 0.15) !important;
     transform: translateY(-1px) !important;
   }
 
