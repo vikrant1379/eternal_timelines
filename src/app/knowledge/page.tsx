@@ -131,10 +131,10 @@ export default function KnowledgePage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-stone-900 dark:text-amber-100 mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h1 className="font-bold text-stone-900 dark:text-amber-100 mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif', fontSize: '36px' }}>
             Eternal Wisdom Hub
           </h1>
-          <p className="text-xl text-stone-700 dark:text-gray-300 max-w-4xl mx-auto serif-text leading-relaxed">
+          <p className="text-lg text-stone-700 dark:text-gray-300 max-w-4xl mx-auto serif-text leading-relaxed">
             Discover the profound wisdom of Sanatan Dharma - timeless principles that have guided humanity 
             towards truth, righteousness, and spiritual liberation for over 5,000 years.
           </p>
@@ -142,7 +142,7 @@ export default function KnowledgePage() {
 
         {/* Fundamental Concepts */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-stone-900 dark:text-amber-100 mb-12 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-amber-100 mb-12 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Fundamental Concepts
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -183,7 +183,7 @@ export default function KnowledgePage() {
 
         {/* Sacred Texts Deep Dive */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-stone-900 dark:text-amber-100 mb-12 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-amber-100 mb-12 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Sacred Literature
           </h2>
           <div className="space-y-8">
@@ -251,7 +251,7 @@ export default function KnowledgePage() {
 
         {/* Practical Wisdom */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-stone-900 dark:text-amber-100 mb-12 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-amber-100 mb-12 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Practical Wisdom for Modern Life
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -278,7 +278,7 @@ export default function KnowledgePage() {
 
         {/* Philosophical Schools */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-stone-900 dark:text-amber-100 mb-12 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-amber-100 mb-12 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Major Philosophical Schools
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -297,7 +297,7 @@ export default function KnowledgePage() {
 
         {/* Learning Path */}
         <div className="mb-16">
-          <h2 className="text-4xl font-bold text-stone-900 dark:text-amber-100 mb-12 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-amber-100 mb-12 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Your Learning Journey
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -351,10 +351,10 @@ export default function KnowledgePage() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="mission-card p-12 rounded-3xl">
-            <h2 className="mission-title text-4xl mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+            <h2 className="mission-title text-3xl mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
               Continue Your Journey
             </h2>
-            <p className="mission-text text-xl mb-8 max-w-3xl mx-auto serif-text leading-relaxed">
+            <p className="mission-text text-lg mb-8 max-w-3xl mx-auto serif-text leading-relaxed">
               This ancient wisdom awaits your exploration. Each concept, each text, each practice offers 
               profound insights for modern living and spiritual growth.
             </p>
