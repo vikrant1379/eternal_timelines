@@ -71,7 +71,7 @@ export default function AboutPage() {
           <h1 className="text-4xl font-bold text-stone-900 dark:text-amber-100 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             About Sanatan Timeline
           </h1>
-          <p className="text-xl text-stone-700 dark:text-stone-200 max-w-3xl mx-auto serif-text leading-relaxed">
+          <p className="text-xl text-stone-800 dark:text-stone-100 max-w-3xl mx-auto serif-text leading-relaxed">
             Preserving the eternal threads of Indian civilization through technology, 
             education, and community collaboration.
           </p>
@@ -83,7 +83,7 @@ export default function AboutPage() {
           <h2 className="mission-title text-4xl mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Our Mission
           </h2>
-          <p className="mission-text text-xl max-w-4xl mx-auto leading-relaxed serif-text">
+          <p className="text-xl max-w-4xl mx-auto leading-relaxed serif-text text-stone-800 dark:text-stone-100">
             To create a comprehensive, accessible, and accurate digital repository of Indian civilization's 
             rich history, philosophy, and cultural heritage. We believe that understanding our past is essential 
             for building a better future, and we're committed to making this knowledge available to everyone, everywhere.
@@ -101,7 +101,7 @@ export default function AboutPage() {
                 <value.icon className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100 mb-2" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>{value.title}</h3>
-              <p className="text-stone-700 dark:text-stone-200 serif-text leading-relaxed">{value.description}</p>
+              <p className="text-stone-800 dark:text-stone-100 serif-text leading-relaxed">{value.description}</p>
             </div>
           ))}
         </div>
@@ -126,7 +126,7 @@ export default function AboutPage() {
                     <p className="text-amber-800 dark:text-amber-300 font-semibold serif-text">{member.role}</p>
                   </div>
                 </div>
-                <p className="text-stone-700 dark:text-stone-200 serif-text leading-relaxed">{member.description}</p>
+                <p className="text-stone-800 dark:text-stone-100 serif-text leading-relaxed">{member.description}</p>
               </div>
             ))}
           </div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
               <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
                 Interactive Timeline
               </h3>
-              <p className="text-stone-700 dark:text-stone-200 serif-text leading-relaxed">
+              <p className="text-stone-800 dark:text-stone-100 serif-text leading-relaxed">
                 Explore thousands of years of history through our interactive, zoomable timeline with detailed event information and contextual insights.
               </p>
             </div>
@@ -156,7 +156,7 @@ export default function AboutPage() {
               <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
                 Geographic Insights
               </h3>
-              <p className="text-stone-700 dark:text-stone-200 serif-text leading-relaxed">
+              <p className="text-stone-800 dark:text-stone-100 serif-text leading-relaxed">
                 Visualize how historical events and cultural movements spread across the Indian subcontinent through interactive maps.
               </p>
             </div>
@@ -167,7 +167,7 @@ export default function AboutPage() {
               <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
                 Community Driven
               </h3>
-              <p className="text-stone-700 dark:text-stone-200 serif-text leading-relaxed">
+              <p className="text-stone-800 dark:text-stone-100 serif-text leading-relaxed">
                 Join our growing community of scholars, researchers, and enthusiasts helping to preserve and expand knowledge of Indian heritage.
               </p>
             </div>
@@ -185,7 +185,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold text-stone-800 dark:text-amber-100 mb-4 serif-text" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
                   {faq.question}
                 </h3>
-                <p className="text-stone-700 dark:text-stone-200 serif-text leading-relaxed text-base">{faq.answer}</p>
+                <p className="text-stone-800 dark:text-stone-100 serif-text leading-relaxed text-base">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -196,7 +196,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-stone-900 dark:text-amber-100 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Ready to Explore Indian Civilization?
           </h2>
-          <p className="text-xl text-stone-700 dark:text-stone-200 mb-8 serif-text leading-relaxed">
+          <p className="text-xl text-stone-800 dark:text-stone-100 mb-8 serif-text leading-relaxed">
             Start your journey through thousands of years of history, philosophy, and culture.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
