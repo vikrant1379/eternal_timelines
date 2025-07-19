@@ -547,16 +547,28 @@
   }
 
   .light p, .light span, .light div {
-    color: #374151;
+    color: #1f2937 !important;
   }
 
   /* Light theme specific text classes */
   .light .text-gray-700 {
-    color: #374151 !important;
+    color: #1f2937 !important;
   }
 
   .light .text-gray-900 {
     color: #111827 !important;
+  }
+
+  .light .text-gray-300 {
+    color: #1f2937 !important;
+  }
+
+  .light .text-stone-700 {
+    color: #1c1917 !important;
+  }
+
+  .light .text-stone-900 {
+    color: #0c0a09 !important;
   }
 
   /* Light theme stats cards */
@@ -618,7 +630,7 @@
 
   /* Ensure readable text in all contexts */
   html:not(.dark) p, html:not(.dark) span, html:not(.dark) div {
-    color: #374151;
+    color: #1f2937 !important;
   }
 
   html:not(.dark) .font-medium {
@@ -627,6 +639,23 @@
 
   html:not(.dark) .text-gray-900 {
     color: #111827 !important;
+  }
+
+  /* Enhanced contrast for light mode text colors */
+  html:not(.dark) .text-gray-700 {
+    color: #1c1917 !important;
+  }
+
+  html:not(.dark) .text-gray-300 {
+    color: #1f2937 !important;
+  }
+
+  html:not(.dark) .text-stone-700 {
+    color: #1c1917 !important;
+  }
+
+  html:not(.dark) .text-stone-900 {
+    color: #0c0a09 !important;
   }
 
   /* Professional card shadows for light theme */
@@ -654,8 +683,9 @@
 
   /* Professional spacing and typography for light theme */
   html:not(.dark) .serif-text {
-    color: #374151;
+    color: #1f2937 !important;
     line-height: 1.6;
+    font-weight: 400;
   }
 
   html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3 {
