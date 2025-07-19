@@ -20,7 +20,7 @@ export default function TimelineEventsGrid({
         <div className="w-10 h-10 academic-accent rounded-xl flex items-center justify-center text-white text-lg mr-3 shadow-lg">
           📚
         </div>
-        <h3 className="text-2xl font-bold text-stone-900" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <h3 className="text-2xl font-bold text-stone-900 dark:text-slate-200" style={{ fontFamily: 'Playfair Display, serif' }}>
           All Events ({events.length})
         </h3>
       </div>
