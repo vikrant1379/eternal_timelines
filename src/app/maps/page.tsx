@@ -110,7 +110,7 @@ export default function MapsPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
             Geographic Insights
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto serif-text">
+          <p className="text-xl text-gray-700 dark:text-gray-200 max-w-4xl mx-auto serif-text">
             Explore the geographical spread of Indian civilization. Visualize how historical events, 
             cultural movements, and spiritual teachings spread across the subcontinent.
           </p>
