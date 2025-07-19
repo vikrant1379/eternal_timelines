@@ -95,7 +95,7 @@ export default function TimelineFilters({ filters, onFiltersChange, totalEvents,
           {hasActiveFilters && (
             <button
               onClick={clearAllFilters}
-              className="flex items-center space-x-2 px-4 py-2 text-sm text-amber-800 hover:text-amber-900 bg-gradient-to-r from-amber-50 to-orange-50 hover:from-amber-100 hover:to-orange-100 rounded-xl transition-all duration-200 border border-amber-200 font-medium"
+              className="flex items-center space-x-2 px-4 py-2 text-sm text-amber-800 hover:text-amber-900 dark:text-amber-300 dark:hover:text-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 hover:from-amber-100 hover:to-orange-100 dark:from-slate-700 dark:to-slate-600 dark:hover:from-slate-600 dark:hover:to-slate-500 rounded-xl transition-all duration-200 border border-amber-200 dark:border-amber-600/30 font-medium timeline-filter-badge"
             >
               <X className="w-4 h-4" />
               <span style={{ fontFamily: 'Playfair Display, serif' }}>Clear all</span>
@@ -103,7 +103,7 @@ export default function TimelineFilters({ filters, onFiltersChange, totalEvents,
           )}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center space-x-2 px-4 py-2 text-sm text-amber-800 hover:text-amber-900 bg-gradient-to-r from-amber-50 to-orange-50 hover:from-amber-100 hover:to-orange-100 rounded-xl transition-all duration-200 border border-amber-200 font-medium"
+            className="flex items-center space-x-2 px-4 py-2 text-sm text-amber-800 hover:text-amber-900 dark:text-amber-300 dark:hover:text-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 hover:from-amber-100 hover:to-orange-100 dark:from-slate-700 dark:to-slate-600 dark:hover:from-slate-600 dark:hover:to-slate-500 rounded-xl transition-all duration-200 border border-amber-200 dark:border-amber-600/30 font-medium timeline-filter-badge"
           >
             <Filter className="w-4 h-4" />
             <span style={{ fontFamily: 'Playfair Display, serif' }}>{isExpanded ? 'Hide' : 'Show'} filters</span>
@@ -181,7 +181,7 @@ export default function TimelineFilters({ filters, onFiltersChange, totalEvents,
                     }}
                     step="1"
                     placeholder="-3000"
-                    className="w-32 px-3 py-2 border border-amber-300 rounded-md text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent font-medium"
+                    className="w-32 px-3 py-2 border border-amber-300 dark:border-amber-600/40 rounded-md text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent font-medium bg-white dark:bg-slate-700 text-gray-900 dark:text-slate-200"
                     style={{ fontFamily: 'Source Serif Pro, serif' }}
                   />
                 </div>
@@ -210,7 +210,7 @@ export default function TimelineFilters({ filters, onFiltersChange, totalEvents,
                     }}
                     step="1"
                     placeholder="2000"
-                    className="w-32 px-3 py-2 border border-amber-300 rounded-md text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent font-medium"
+                    className="w-32 px-3 py-2 border border-amber-300 dark:border-amber-600/40 rounded-md text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent font-medium bg-white dark:bg-slate-700 text-gray-900 dark:text-slate-200"
                     style={{ fontFamily: 'Source Serif Pro, serif' }}
                   />
                 </div>
@@ -248,4 +248,4 @@ export default function TimelineFilters({ filters, onFiltersChange, totalEvents,
       )}
     </div>
   );
-} 
+}
