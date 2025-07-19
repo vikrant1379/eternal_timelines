@@ -1,6 +1,7 @@
 'use client';
 
 import { TimelineEvent as TimelineEventType } from '@/types/timeline';
+import { Search } from 'lucide-react';
 import TimelineEvent from '../TimelineEvent';
 
 interface TimelineEventDetailsProps {
@@ -17,9 +18,9 @@ export default function TimelineEventDetails({ selectedEvent, onClose }: Timelin
       className="academic-card p-8 transition-all duration-500 ease-in-out backdrop-blur-sm hover:border-transparent"
     >
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-2xl font-bold text-stone-900 flex items-center" style={{ fontFamily: 'Playfair Display, serif' }}>
-          <div className="w-10 h-10 academic-accent rounded-xl flex items-center justify-center text-white text-lg mr-3 shadow-lg">
-            🔍
+        <h3 className="text-2xl font-bold text-stone-900 dark:text-stone-100 flex items-center" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 dark:from-amber-500 dark:to-orange-500 rounded-xl flex items-center justify-center text-lg mr-3 shadow-lg">
+            <Search className="w-5 h-5 text-white dark:text-gray-900" />
           </div>
           Selected Event Details
         </h3>

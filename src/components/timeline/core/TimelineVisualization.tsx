@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import { TimelineEvent as TimelineEventType } from '@/types/timeline';
 import { formatYear } from '@/lib/utils';
@@ -30,10 +30,46 @@ export default function TimelineVisualization({
   const setSelectedEventRef = useRef(onEventSelect);
   setSelectedEventRef.current = onEventSelect;
 
+  // Track theme changes for re-rendering
+  const [themeVersion, setThemeVersion] = useState(0);
+
+  // Listen for theme changes
+  useEffect(() => {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          setThemeVersion(prev => prev + 1);
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   // D3 timeline setup
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (!svgRef.current || !containerRef.current || events.length === 0) return;
+
+    // Detect current theme
+    const isDarkMode = document.documentElement.classList.contains('dark');
+    
+    // Theme-aware colors
+    const colors = {
+      text: isDarkMode ? '#e5e7eb' : '#374151',
+      textSecondary: isDarkMode ? '#9ca3af' : '#6b7280', 
+      textEvent: isDarkMode ? '#fbbf24' : '#ea580c',
+      textSelected: isDarkMode ? '#ef4444' : '#dc2626',
+      textShadow: isDarkMode ? '1px 1px 2px rgba(0,0,0,0.8)' : '1px 1px 2px rgba(255,255,255,0.9)',
+      textShadowSelected: isDarkMode ? 
+        '1px 1px 2px rgba(239, 68, 68, 0.3), 0 0 10px rgba(239, 68, 68, 0.2)' : 
+        '1px 1px 2px rgba(220, 38, 38, 0.3), 0 0 10px rgba(220, 38, 38, 0.2)'
+    };
 
     // Small delay to ensure DOM is ready
     const timer = setTimeout(() => {
@@ -118,7 +154,7 @@ export default function TimelineVisualization({
             .attr('x', (baseRange[0] + baseRange[1]) / 2)
             .attr('y', height / 2 - 20)
             .attr('text-anchor', 'middle')
-            .attr('fill', '#6b7280')
+            .attr('fill', colors.textSecondary)
             .attr('font-size', '14px')
             .text(`Showing ${Math.round(visibleRange)} years - zoom in for details`);
           return;
@@ -251,10 +287,10 @@ export default function TimelineVisualization({
             .attr('x', x)
             .attr('y', yearPos.y)
             .attr('text-anchor', 'middle')
-            .attr('fill', isEventYear ? '#ea580c' : '#6b7280')
+            .attr('fill', isEventYear ? colors.textEvent : colors.textSecondary)
             .attr('font-size', isEventYear ? '11px' : '10px')
             .attr('font-weight', isEventYear ? '600' : '400')
-            .style('text-shadow', '1px 1px 2px rgba(255,255,255,0.9)')
+            .style('text-shadow', colors.textShadow)
             .text(formatYear(year));
         });
 
@@ -342,12 +378,10 @@ export default function TimelineVisualization({
               .attr('x', x)
               .attr('y', y)
               .attr('text-anchor', 'middle')
-              .attr('fill', isSelected ? '#dc2626' : '#374151')
+              .attr('fill', isSelected ? colors.textSelected : colors.text)
               .attr('font-size', event.importance === 'critical' ? '11px' : '10px')
               .attr('font-weight', isSelected ? 'bold' : '600')
-              .style('text-shadow', isSelected ? 
-                '1px 1px 2px rgba(220, 38, 38, 0.3), 0 0 10px rgba(220, 38, 38, 0.2)' : 
-                '1px 1px 2px rgba(255,255,255,0.9)')
+              .style('text-shadow', isSelected ? colors.textShadowSelected : colors.textShadow)
               .style('cursor', 'pointer')
               .style('pointer-events', 'all')
               .attr('data-event-id', event.id)
@@ -553,7 +587,7 @@ export default function TimelineVisualization({
     }, 100);
 
     return () => clearTimeout(timer);
-  }, [events, selectedEvent, onZoomChange, svgRef, containerRef, zoomBehaviorRef, currentTransformRef]);
+  }, [events, selectedEvent, onZoomChange, svgRef, containerRef, zoomBehaviorRef, currentTransformRef, themeVersion]);
 
   return (
     <div ref={containerRef} className="w-full overflow-hidden relative">

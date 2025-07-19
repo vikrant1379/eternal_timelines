@@ -43,15 +43,9 @@ export default function TimelineStatus({
           {/* Database Overview - Always visible */}
           <div className="flex items-center space-x-3">
             <div className="w-3 h-3 bg-gradient-to-br from-amber-600 to-orange-700 rounded-full shadow-sm"></div>
-            <span className="text-sm font-semibold text-amber-900" style={{ fontFamily: 'Playfair Display, serif' }}>
+            <span className="text-sm font-semibold text-amber-400" style={{ fontFamily: 'Playfair Display, serif' }}>
               {isFiltered ? 'Filtered View' : 'Complete Timeline'}
             </span>
-          </div>
-          
-          {/* Event counts */}
-          <div className="text-sm text-amber-800 bg-white/50 px-4 py-2 rounded-full border border-amber-200" style={{ fontFamily: 'Playfair Display, serif'}}>
-            <span className="font-bold">{filteredEvents.length}</span> of{' '}
-            <span className="font-bold">{totalEvents}</span> events
           </div>
           
           {/* Time range display */}
@@ -62,7 +56,7 @@ export default function TimelineStatus({
                   Showing: {formatYear(filteredMinYear)} — {formatYear(filteredMaxYear)}
                 </div>
               )}
-              <div className="text-xs text-stone-700 bg-gradient-to-r from-stone-50 to-stone-25 px-4 py-2 rounded-full border border-stone-200 font-medium">
+              <div className="text-xs text-stone-700 bg-gradient-to-r from-amber-50 to-orange-50 px-4 py-2 rounded-full border border-stone-200 font-medium">
                 Database: {formatYear(totalMinYear)} — {formatYear(totalMaxYear)}
               </div>
             </div>
@@ -71,13 +65,13 @@ export default function TimelineStatus({
         
         {showControls && (
           <div className="flex items-center space-x-3">
-            <span className="text-sm text-amber-800 font-medium mr-2" style={{ fontFamily: 'Source Serif Pro, serif' }}>
+            <span className="text-sm text-amber-400 font-medium mr-2" style={{ fontFamily: 'Source Serif Pro, serif' }}>
               Timeline Controls
             </span>
             {onZoomOut && (
               <button
                 onClick={onZoomOut}
-                className="p-3 bg-gradient-to-br from-white to-amber-25 border border-amber-200 rounded-xl hover:from-amber-25 hover:to-amber-50 transition-all duration-200 shadow-sm hover:shadow-md transform hover:scale-105"
+                className="p-3 bg-gradient-to-br from-amber-100 to-amber-200 border border-amber-200 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md transform hover:scale-105 hover:from-amber-100 hover:to-amber-200 dark:hover:from-amber-200 dark:hover:to-amber-400"
                 title="Zoom Out"
               >
                 <ZoomOut className="w-4 h-4 text-amber-700" />
@@ -86,7 +80,7 @@ export default function TimelineStatus({
             {onZoomIn && (
               <button
                 onClick={onZoomIn}
-                className="p-3 bg-gradient-to-br from-white to-amber-25 border border-amber-200 rounded-xl hover:from-amber-25 hover:to-amber-50 transition-all duration-200 shadow-sm hover:shadow-md transform hover:scale-105"
+                className="p-3 bg-gradient-to-br from-amber-100 to-amber-200 border border-amber-200 rounded-xl hover:from-amber-25 hover:to-amber-50 transition-all duration-200 shadow-sm hover:shadow-md transform hover:scale-105"
                 title="Zoom In"
               >
                 <ZoomIn className="w-4 h-4 text-amber-700" />
@@ -95,7 +89,7 @@ export default function TimelineStatus({
             {onReset && (
               <button
                 onClick={onReset}
-                className="p-3 bg-gradient-to-br from-white to-amber-25 border border-amber-200 rounded-xl hover:from-amber-25 hover:to-amber-50 transition-all duration-200 shadow-sm hover:shadow-md transform hover:scale-105"
+                className="p-3 bg-gradient-to-br from-amber-100 to-amber-200 border border-amber-200 rounded-xl hover:from-amber-25 hover:to-amber-50 transition-all duration-200 shadow-sm hover:shadow-md transform hover:scale-105"
                 title="Reset View"
               >
                 <RotateCcw className="w-4 h-4 text-amber-700" />
@@ -106,7 +100,7 @@ export default function TimelineStatus({
       </div>
       
       {isFiltered && (
-        <div className="mt-4 text-sm text-amber-700 bg-white/50 px-4 py-2 rounded-xl border border-amber-200" style={{ fontFamily: 'Source Serif Pro, serif' }}>
+        <div className="mt-4 text-sm text-amber-700 bg-white/90 px-4 py-2 rounded-xl border border-amber-200" style={{ fontFamily: 'Source Serif Pro, serif' }}>
           💡 Use filters above to refine your timeline view
         </div>
       )}
