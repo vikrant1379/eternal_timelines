@@ -1,73 +1,128 @@
 import Link from 'next/link';
-import { BookOpen, Lightbulb, Heart, Users, ArrowRight } from 'lucide-react';
+import { BookOpen, Lightbulb, Heart, Users, ArrowRight, Clock, Globe, Star, ChevronRight } from 'lucide-react';
 
 export default function KnowledgePage() {
-  const knowledgeSections = [
+  const fundamentalConcepts = [
     {
-      title: 'Basics of Sanatan Dharma',
-      description: 'Understanding the fundamental principles and concepts that form the foundation of Indian philosophy.',
-      icon: Lightbulb,
-      topics: [
-        'Dharma - The Eternal Law',
-        'Karma - Action and Consequence',
-        'Moksha - Liberation',
-        'Atman - The Eternal Self',
-        'Brahman - The Ultimate Reality',
-        'The Four Purusharthas'
-      ],
-      color: 'from-orange-400 to-amber-600'
+      title: 'Dharma',
+      subtitle: 'The Eternal Law',
+      description: 'The fundamental principle of righteousness, moral and ethical living that maintains cosmic order.',
+      details: 'Dharma encompasses duty, righteousness, and the natural order. It varies according to age, class, situation, and spiritual development.',
+      keyPoints: ['Universal principles', 'Personal duty', 'Social harmony', 'Cosmic order']
     },
     {
-      title: 'Sacred Scriptures',
-      description: 'Explore the ancient texts that contain the wisdom passed down through generations.',
-      icon: BookOpen,
-      topics: [
-        'The Four Vedas',
-        'Upanishads - Philosophical Texts',
-        'Bhagavad Gita - Song of the Lord',
-        'Puranas - Ancient Stories',
-        'Ramayana - Epic of Lord Rama',
-        'Mahabharata - Great Epic'
-      ],
-      color: 'from-amber-500 to-orange-600'
+      title: 'Karma',
+      subtitle: 'Law of Action',
+      description: 'The universal principle of cause and effect where every action has corresponding consequences.',
+      details: 'Understanding karma helps us take responsibility for our actions and their results across lifetimes.',
+      keyPoints: ['Cause and effect', 'Moral responsibility', 'Reincarnation', 'Liberation through action']
     },
     {
-      title: 'Spiritual Teachings',
-      description: 'Learn from the wisdom of saints, sages, and spiritual masters throughout history.',
-      icon: Heart,
-      topics: [
-        'Advaita Vedanta',
-        'Bhakti Movement',
-        'Yoga and Meditation',
-        'Guru-Shishya Tradition',
-        'Sacred Mantras',
-        'Temple Architecture'
-      ],
-      color: 'from-orange-500 to-red-600'
+      title: 'Moksha',
+      subtitle: 'Ultimate Liberation',
+      description: 'The final goal of human existence - liberation from the cycle of birth, death, and rebirth.',
+      details: 'Moksha represents the soul\'s return to its true nature and union with the divine consciousness.',
+      keyPoints: ['Freedom from rebirth', 'Self-realization', 'Union with Brahman', 'Eternal bliss']
+    },
+    {
+      title: 'Atman',
+      subtitle: 'The Eternal Self',
+      description: 'The individual soul or consciousness that is eternal and identical with the universal Brahman.',
+      details: 'Recognizing the Atman as one\'s true identity is central to spiritual realization and liberation.',
+      keyPoints: ['Individual consciousness', 'Eternal nature', 'Unity with Brahman', 'True identity']
     }
   ];
 
-  const featuredTexts = [
+  const sacredTexts = [
     {
       title: 'Bhagavad Gita',
-      description: 'The divine song of Lord Krishna, containing the essence of all Vedic knowledge.',
-      period: '500 BCE',
+      category: 'Philosophical Dialogue',
+      period: '400 BCE - 400 CE',
       chapters: 18,
-      verses: 700
-    },
-    {
-      title: 'Rig Veda',
-      description: 'The oldest of the four Vedas, containing hymns and mantras.',
-      period: '1500 BCE',
-      chapters: 10,
-      verses: 1028
+      verses: 700,
+      description: 'A profound dialogue between Prince Arjuna and Lord Krishna on the battlefield of Kurukshetra, addressing fundamental questions of duty, righteousness, and spiritual realization.',
+      keyTeachings: ['Paths to liberation', 'Duty without attachment', 'Divine consciousness', 'Yoga philosophy'],
+      significance: 'Considered the essence of Vedic wisdom, offering practical guidance for spiritual living.'
     },
     {
       title: 'Upanishads',
-      description: 'Philosophical texts that explore the nature of reality and consciousness.',
-      period: '800 BCE',
+      category: 'Philosophical Treatises',
+      period: '800 BCE - 200 CE',
       chapters: 108,
-      verses: 'Varies'
+      verses: 'Varies',
+      description: 'The concluding portions of the Vedas that explore the nature of ultimate reality, consciousness, and the relationship between individual and universal consciousness.',
+      keyTeachings: ['Brahman realization', 'Self-inquiry', 'Meditation practices', 'Unity of existence'],
+      significance: 'Foundation of Vedantic philosophy and the source of non-dualistic understanding.'
+    },
+    {
+      title: 'Vedas',
+      category: 'Sacred Hymns',
+      period: '1500 BCE - 500 BCE',
+      chapters: 4,
+      verses: '20,000+',
+      description: 'The oldest sacred texts containing hymns, rituals, and philosophical insights revealed to ancient sages.',
+      keyTeachings: ['Cosmic principles', 'Ritual knowledge', 'Natural harmony', 'Divine invocation'],
+      significance: 'The foundation of all Hindu knowledge and spiritual practice.'
+    }
+  ];
+
+  const practicalWisdom = [
+    {
+      title: 'Daily Spiritual Practices',
+      icon: '🕉️',
+      practices: [
+        'Morning meditation and prayer',
+        'Reading sacred texts',
+        'Mindful living throughout the day',
+        'Evening reflection and gratitude'
+      ]
+    },
+    {
+      title: 'Ethical Guidelines',
+      icon: '⚖️',
+      practices: [
+        'Ahimsa (Non-violence in thought and action)',
+        'Satya (Truthfulness in speech and intent)',
+        'Asteya (Non-stealing, contentment)',
+        'Brahmacharya (Energy conservation and focus)'
+      ]
+    },
+    {
+      title: 'Paths of Yoga',
+      icon: '🧘',
+      practices: [
+        'Karma Yoga (Path of selfless action)',
+        'Bhakti Yoga (Path of devotion)',
+        'Raja Yoga (Path of meditation)',
+        'Jnana Yoga (Path of knowledge)'
+      ]
+    }
+  ];
+
+  const philosophicalSchools = [
+    {
+      name: 'Advaita Vedanta',
+      founder: 'Adi Shankaracharya',
+      core: 'Non-dualism - All is One Brahman',
+      impact: 'Unified diverse philosophical traditions'
+    },
+    {
+      name: 'Dvaita Vedanta',
+      founder: 'Madhvacharya',
+      core: 'Dualism - Distinct soul and God',
+      impact: 'Emphasized devotional practices'
+    },
+    {
+      name: 'Vishishtadvaita',
+      founder: 'Ramanujacharya',
+      core: 'Qualified non-dualism',
+      impact: 'Balanced philosophy and devotion'
+    },
+    {
+      name: 'Sankhya',
+      founder: 'Kapila Muni',
+      core: 'Dualistic analysis of reality',
+      impact: 'Foundation for yoga philosophy'
     }
   ];
 
@@ -75,74 +130,118 @@ export default function KnowledgePage() {
     <div className="min-h-screen academic-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-stone-900 dark:text-amber-100 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-            Knowledge Hub
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-stone-900 dark:text-amber-100 mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+            Eternal Wisdom Hub
           </h1>
-          <p className="text-xl text-stone-700 dark:text-gray-300 max-w-3xl mx-auto serif-text">
-            Dive deep into the timeless wisdom of Sanatan Dharma. Explore sacred texts, 
-            philosophical concepts, and spiritual teachings that have guided humanity for millennia.
+          <p className="text-xl text-stone-700 dark:text-gray-300 max-w-4xl mx-auto serif-text leading-relaxed">
+            Discover the profound wisdom of Sanatan Dharma - timeless principles that have guided humanity 
+            towards truth, righteousness, and spiritual liberation for over 5,000 years.
           </p>
         </div>
 
-        {/* Knowledge Sections */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {knowledgeSections.map((section) => (
-            <div
-              key={section.title}
-              className="academic-card p-6"
-            >
-              <div className={`w-16 h-16 bg-gradient-to-br ${section.color} rounded-xl flex items-center justify-center mb-6 shadow-md`}>
-                <section.icon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-100 mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>{section.title}</h3>
-              <p className="text-stone-700 dark:text-gray-300 mb-6 serif-text">{section.description}</p>
-              <ul className="space-y-2">
-                {section.topics.map((topic) => (
-                  <li key={topic} className="flex items-center text-stone-700 dark:text-gray-300 serif-text">
-                    <div className="w-2 h-2 bg-gradient-to-r from-amber-600 to-orange-700 rounded-full mr-3"></div>
-                    {topic}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* Featured Sacred Texts */}
-        <div className="content-section mb-16">
-          <h2 className="text-3xl font-bold text-stone-900 dark:text-gray-100 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-            Featured Sacred Texts
+        {/* Fundamental Concepts */}
+        <div className="mb-20">
+          <h2 className="text-4xl font-bold text-stone-900 dark:text-amber-100 mb-12 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+            Fundamental Concepts
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {featuredTexts.map((text, index) => (
-              <div
-                key={text.title}
-                className="academic-card p-6 transition-all duration-300"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="bg-amber-600 text-white p-2 rounded-lg mr-4">
-                    <BookOpen className="w-6 h-6" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {fundamentalConcepts.map((concept, index) => (
+              <div key={concept.title} className="academic-card p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mr-4">
+                    <span className="text-white font-bold text-lg">{index + 1}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100" style={{ fontFamily: 'Playfair Display, serif' }}>{text.title}</h3>
+                  <div>
+                    <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-100" style={{ fontFamily: 'Playfair Display, serif' }}>
+                      {concept.title}
+                    </h3>
+                    <p className="text-amber-600 dark:text-amber-400 font-medium">{concept.subtitle}</p>
+                  </div>
                 </div>
 
-                <p className="text-stone-700 dark:text-gray-300 serif-text mb-6">
-                  {text.description}
+                <p className="text-stone-700 dark:text-gray-300 serif-text mb-4 leading-relaxed">
+                  {concept.description}
                 </p>
 
-                <div className="space-y-3 text-sm text-stone-700 dark:text-gray-300 serif-text">
-                  <div className="flex justify-between">
-                    <span className="font-medium">Period:</span>
-                    <span>{text.period}</span>
+                <p className="text-stone-600 dark:text-gray-400 serif-text mb-6 text-sm leading-relaxed">
+                  {concept.details}
+                </p>
+
+                <div className="grid grid-cols-2 gap-2">
+                  {concept.keyPoints.map((point) => (
+                    <div key={point} className="flex items-center text-sm text-stone-700 dark:text-gray-300">
+                      <div className="w-2 h-2 bg-amber-600 rounded-full mr-2"></div>
+                      {point}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Sacred Texts Deep Dive */}
+        <div className="mb-20">
+          <h2 className="text-4xl font-bold text-stone-900 dark:text-amber-100 mb-12 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+            Sacred Literature
+          </h2>
+          <div className="space-y-8">
+            {sacredTexts.map((text, index) => (
+              <div key={text.title} className="academic-card p-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  <div className="lg:col-span-2">
+                    <div className="flex items-center mb-4">
+                      <BookOpen className="w-8 h-8 text-amber-600 mr-3" />
+                      <div>
+                        <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-100" style={{ fontFamily: 'Playfair Display, serif' }}>
+                          {text.title}
+                        </h3>
+                        <p className="text-amber-600 dark:text-amber-400 font-medium">{text.category}</p>
+                      </div>
+                    </div>
+
+                    <p className="text-stone-700 dark:text-gray-300 serif-text mb-6 leading-relaxed">
+                      {text.description}
+                    </p>
+
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-stone-900 dark:text-amber-200 mb-3">Key Teachings:</h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        {text.keyTeachings.map((teaching) => (
+                          <div key={teaching} className="flex items-center text-stone-700 dark:text-gray-300 text-sm">
+                            <ChevronRight className="w-4 h-4 text-amber-600 mr-2" />
+                            {teaching}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg">
+                      <p className="text-stone-800 dark:text-amber-200 serif-text text-sm font-medium">
+                        <span className="font-semibold">Significance:</span> {text.significance}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="font-medium">Chapters:</span>
-                    <span>{text.chapters}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-medium">Verses:</span>
-                    <span>{text.verses}</span>
+
+                  <div className="space-y-4">
+                    <div className="bg-stone-100 dark:bg-gray-800 p-4 rounded-lg">
+                      <h4 className="font-semibold text-stone-900 dark:text-amber-200 mb-3">Details</h4>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex justify-between">
+                          <span className="text-stone-600 dark:text-gray-400">Period:</span>
+                          <span className="text-stone-800 dark:text-gray-200">{text.period}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-stone-600 dark:text-gray-400">Chapters:</span>
+                          <span className="text-stone-800 dark:text-gray-200">{text.chapters}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-stone-600 dark:text-gray-400">Verses:</span>
+                          <span className="text-stone-800 dark:text-gray-200">{text.verses}</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -150,294 +249,125 @@ export default function KnowledgePage() {
           </div>
         </div>
 
+        {/* Practical Wisdom */}
+        <div className="mb-20">
+          <h2 className="text-4xl font-bold text-stone-900 dark:text-amber-100 mb-12 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+            Practical Wisdom for Modern Life
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {practicalWisdom.map((section) => (
+              <div key={section.title} className="academic-card p-8">
+                <div className="text-center mb-6">
+                  <div className="text-4xl mb-4">{section.icon}</div>
+                  <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100" style={{ fontFamily: 'Playfair Display, serif' }}>
+                    {section.title}
+                  </h3>
+                </div>
+                <ul className="space-y-3">
+                  {section.practices.map((practice) => (
+                    <li key={practice} className="flex items-start text-stone-700 dark:text-gray-300 serif-text">
+                      <Star className="w-4 h-4 text-amber-600 mr-3 mt-1 flex-shrink-0" />
+                      {practice}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Philosophical Schools */}
+        <div className="mb-20">
+          <h2 className="text-4xl font-bold text-stone-900 dark:text-amber-100 mb-12 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+            Major Philosophical Schools
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {philosophicalSchools.map((school) => (
+              <div key={school.name} className="academic-card p-6">
+                <h3 className="text-xl font-bold text-stone-900 dark:text-amber-100 mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  {school.name}
+                </h3>
+                <p className="text-amber-600 dark:text-amber-400 font-medium mb-3">Founded by {school.founder}</p>
+                <p className="text-stone-700 dark:text-gray-300 serif-text mb-3">{school.core}</p>
+                <p className="text-stone-600 dark:text-gray-400 serif-text text-sm">{school.impact}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Learning Path */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-stone-900 dark:text-gray-100 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-            Begin Your Learning Journey
+          <h2 className="text-4xl font-bold text-stone-900 dark:text-amber-100 mb-12 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+            Your Learning Journey
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* For Beginners */}
-            <div className="academic-card p-8 transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <div className="bg-amber-600 text-white p-3 rounded-lg mr-4">
-                  <Lightbulb className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-100" style={{ fontFamily: 'Playfair Display, serif' }}>For Beginners</h3>
-              </div>
-              <ul className="space-y-4 text-stone-700 dark:text-gray-300 serif-text">
-                <li>Start with the basics of Dharma and Karma</li>
-                <li>Read simplified versions of sacred texts</li>
-                <li>Practice basic meditation techniques</li>
-              </ul>
-            </div>
-
-            {/* For Advanced Learners */}
-            <div className="academic-card p-8 transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <div className="bg-amber-600 text-white p-3 rounded-lg mr-4">
-                  <BookOpen className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-100" style={{ fontFamily: 'Playfair Display, serif' }}>For Advanced Learners</h3>
-              </div>
-              <ul className="space-y-4 text-stone-700 dark:text-gray-300 serif-text">
-                <li>Study original Sanskrit texts</li>
-                <li>Deep dive into philosophical concepts</li>
-                <li>Explore advanced spiritual practices</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-         {/* Contribute Section */}
-         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-stone-900 dark:text-gray-100 mb-8 text-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-            Contribute to the Knowledge
-          </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Timeline Event Card */}
-          <div className="academic-card p-8 transition-all duration-300 group">
-            <div className="w-16 h-16 academic-accent rounded-xl flex items-center justify-center mb-6 shadow-lg transition-transform duration-300">
-              <span className="text-white text-2xl">📅</span>
+            <div className="academic-card p-8 text-center">
+              <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">🌱</span>
+              </div>
+              <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-100 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+                Beginner
+              </h3>
+              <ul className="text-stone-700 dark:text-gray-300 serif-text space-y-2 text-left">
+                <li>• Understand the four Purusharthas</li>
+                <li>• Learn basic Sanskrit terms</li>
+                <li>• Study simplified Bhagavad Gita</li>
+                <li>• Practice simple meditation</li>
+              </ul>
             </div>
-            <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-300 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>Timeline Event</h3>
-            <p className="text-stone-700 dark:text-gray-300 mb-6 serif-text leading-relaxed">Add a new historical event to our timeline with detailed historical context</p>
-            <button className="btn-academic w-full justify-center" style={{ fontFamily: 'Source Serif Pro, serif' }}>
-              Add Event
-            </button>
-          </div>
 
-          {/* Article Card */}
-          <div className="academic-card p-8 transition-all duration-300 group">
-            <div className="w-16 h-16 academic-accent rounded-xl flex items-center justify-center mb-6 shadow-lg transition-transform duration-300">
-              <span className="text-white text-2xl">📄</span>
+            <div className="academic-card p-8 text-center">
+              <div className="w-16 h-16 bg-amber-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">🌳</span>
+              </div>
+              <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-100 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+                Intermediate
+              </h3>
+              <ul className="text-stone-700 dark:text-gray-300 serif-text space-y-2 text-left">
+                <li>• Study key Upanishads</li>
+                <li>• Explore philosophical schools</li>
+                <li>• Deepen yoga practice</li>
+                <li>• Understand historical context</li>
+              </ul>
             </div>
-            <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-300 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>Article</h3>
-            <p className="text-stone-700 dark:text-gray-300 mb-6 serif-text leading-relaxed">Write an in-depth article about a topic with scholarly research and references</p>
-            <button className="btn-academic w-full justify-center" style={{ fontFamily: 'Source Serif Pro, serif' }}>
-              Write Article
-            </button>
-          </div>
 
-          {/* Fact Check Card */}
-          <div className="academic-card p-8 transition-all duration-300 group">
-            <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 shadow-lg transition-transform duration-300">
-              <span className="text-white text-2xl">✓</span>
-            </div>
-            <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-300 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>Fact Check</h3>
-            <p className="text-stone-700 dark:text-gray-300 mb-6 serif-text leading-relaxed">Verify or correct existing information with credible sources and evidence</p>
-            <button className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white px-6 py-3 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md w-full justify-center inline-flex items-center font-medium" style={{ fontFamily: 'Source Serif Pro, serif' }}>
-              Fact Check
-            </button>
-          </div>
-        </div>
-        </div>
-
-        {/* Timeline Event Form */}
-        <div className="mb-16">
-          <div className="academic-card p-10 max-w-4xl mx-auto">
-            <div className="mb-8 text-center">
-              <div className="w-20 h-20 academic-accent rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <span className="text-white text-3xl">📅</span>
+            <div className="academic-card p-8 text-center">
+              <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">🌟</span>
               </div>
-              <h2 className="text-3xl font-bold text-stone-900 dark:text-amber-300 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-                Add Timeline Event
-              </h2>
-              <p className="text-stone-700 dark:text-gray-300 serif-text text-lg">
-                Contribute a significant historical event to our comprehensive timeline
-              </p>
-            </div>
-            
-            <form className="space-y-8">
-              {/* Title */}
-              <div className="space-y-3">
-                <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
-                  Title <span className="text-amber-600">*</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter the title of the event, article, or fact check"
-                  className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
-                />
-              </div>
-
-              {/* Description */}
-              <div className="space-y-3">
-                <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
-                  Description <span className="text-amber-600">*</span>
-                </label>
-                <textarea
-                  rows={5}
-                  placeholder="Provide a detailed description..."
-                  className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200 resize-vertical"
-                />
-              </div>
-
-              {/* Year and Category Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-3">
-                  <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
-                    Year <span className="text-amber-600">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="e.g., 1500 for 1500 BCE, 1947 for 1947 CE"
-                    className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
-                  />
-                </div>
-                
-                <div className="space-y-3">
-                  <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
-                    Category <span className="text-amber-600">*</span>
-                  </label>
-                  <select className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200">
-                    <option value="">Select a category</option>
-                    <option value="religious">Religious</option>
-                    <option value="cultural">Cultural</option>
-                    <option value="political">Political</option>
-                    <option value="social">Social</option>
-                    <option value="philosophical">Philosophical</option>
-                  </select>
-                </div>
-              </div>
-
-              {/* Location and Importance Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-3">
-                  <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
-                    Location
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="e.g., Delhi, India"
-                    className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
-                  />
-                </div>
-                
-                <div className="space-y-3">
-                  <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
-                    Importance
-                  </label>
-                  <select className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200">
-                    <option value="">Select importance level</option>
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                    <option value="critical">Critical</option>
-                  </select>
-                </div>
-              </div>
-
-              {/* Tags and Sources Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-3">
-                  <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
-                    Tags
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="e.g., hinduism, vedas, philosophy (comma separated)"
-                    className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
-                  />
-                </div>
-                
-                <div className="space-y-3">
-                  <label className="block text-sm font-semibold text-stone-800 dark:text-amber-200 serif-text">
-                    Sources
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="e.g., Ancient texts, Archaeological findings"
-                    className="w-full px-4 py-3 border border-stone-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-gray-100 serif-text transition-all duration-200"
-                  />
-                </div>
-              </div>
-
-              {/* Submit Button */}
-              <div className="pt-6 border-t border-stone-200 dark:border-gray-600">
-                <button
-                  type="submit"
-                  className="btn-academic px-8 py-4 text-lg font-semibold w-full md:w-auto md:mx-auto block"
-                  style={{ fontFamily: 'Source Serif Pro, serif' }}
-                >
-                  Submit Contribution
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        {/* Contribution Guidelines */}
-        <div className="mb-16">
-          <div className="mission-card p-10 rounded-xl">
-            <div className="text-center mb-8">
-              <h2 className="mission-title text-3xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-                Contribution Guidelines
-              </h2>
-              <p className="mission-text text-lg serif-text">
-                Help us maintain the highest standards of scholarly accuracy and cultural sensitivity
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl">📚</span>
-                </div>
-                <h4 className="font-bold text-stone-900 dark:text-amber-200 mb-2">Research</h4>
-                <p className="text-sm mission-text">Cite credible sources and provide historical context</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl">🔍</span>
-                </div>
-                <h4 className="font-bold text-stone-900 dark:text-amber-200 mb-2">Accuracy</h4>
-                <p className="text-sm mission-text">Verify information through multiple reliable sources</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl">🙏</span>
-                </div>
-                <h4 className="font-bold text-stone-900 dark:text-amber-200 mb-2">Respect</h4>
-                <p className="text-sm mission-text">Maintain cultural sensitivity and scholarly objectivity</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl">✨</span>
-                </div>
-                <h4 className="font-bold text-stone-900 dark:text-amber-200 mb-2">Quality</h4>
-                <p className="text-sm mission-text">Use clear, professional language and proper formatting</p>
-              </div>
+              <h3 className="text-2xl font-bold text-stone-900 dark:text-amber-100 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+                Advanced
+              </h3>
+              <ul className="text-stone-700 dark:text-gray-300 serif-text space-y-2 text-left">
+                <li>• Read original Sanskrit texts</li>
+                <li>• Study commentaries by masters</li>
+                <li>• Practice advanced meditation</li>
+                <li>• Contribute to preservation</li>
+              </ul>
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-stone-900 dark:text-amber-100 mb-4" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-            Ready to Explore More?
-          </h2>
-          <p className="text-xl text-stone-700 dark:text-gray-300 mb-8 serif-text">
-            Join our community of learners and contribute to preserving this ancient wisdom.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/timeline"
-              className="btn-academic"
-            >
-              Explore Timeline
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Link>
-            <Link
-              href="/contribute"
-              className="btn-secondary"
-            >
-              Contribute Knowledge
-              <Users className="ml-2 w-4 h-4" />
-            </Link>
+          <div className="mission-card p-12 rounded-3xl">
+            <h2 className="mission-title text-4xl mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+              Continue Your Journey
+            </h2>
+            <p className="mission-text text-xl mb-8 max-w-3xl mx-auto serif-text leading-relaxed">
+              This ancient wisdom awaits your exploration. Each concept, each text, each practice offers 
+              profound insights for modern living and spiritual growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/timeline" className="btn-academic">
+                Explore Historical Timeline
+                <Clock className="ml-2 w-4 h-4" />
+              </Link>
+              <Link href="/contribute" className="btn-secondary">
+                Share Your Knowledge
+                <Heart className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
