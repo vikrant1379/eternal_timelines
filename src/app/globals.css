@@ -227,12 +227,37 @@
     box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2) !important;
   }
 
-  /* Timeline specific button styling */
+  /* Timeline Status and Controls - Professional light/dark mode styling */
+  .timeline-status {
+    background: linear-gradient(135deg, #fefbf7 0%, #ffffff 50%, #fef8f0 100%);
+    border: 1px solid #f3e8ff;
+    transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+
+  .dark .timeline-status {
+    background: linear-gradient(145deg, #1e293b 0%, #1a2332 100%);
+    border: 1px solid rgba(245, 158, 11, 0.15);
+    box-shadow: 
+      0 4px 16px rgba(0, 0, 0, 0.4),
+      0 1px 4px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  /* Timeline controls styling */
   .timeline-controls button {
     background: #ffffff;
-    border: 1px solid #f59e0b;
-    color: #d97706;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
     transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .timeline-controls button:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+    color: #374151;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
   }
 
   .dark .timeline-controls button {
@@ -242,13 +267,6 @@
     box-shadow: 
       0 2px 8px rgba(0, 0, 0, 0.3),
       inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  }
-
-  .timeline-controls button:hover {
-    background: #fef3c7;
-    border-color: #d97706;
-    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
-    transform: translateY(-1px);
   }
 
   .dark .timeline-controls button:hover {
@@ -263,7 +281,12 @@
 
   .timeline-controls button:focus {
     outline: none !important;
-    border-color: #d97706 !important;
+    border-color: #d1d5db !important;
+    box-shadow: 0 0 0 2px rgba(156, 163, 175, 0.2) !important;
+  }
+
+  .dark .timeline-controls button:focus {
+    border-color: rgba(245, 158, 11, 0.3) !important;
     box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2) !important;
   }
 

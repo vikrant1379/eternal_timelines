@@ -27,16 +27,16 @@ export default function TimelineCard({ children, isEmpty }: TimelineCardProps) {
   }
 
   return (
-    <div className="academic-card p-6 backdrop-blur-sm hover:border-transparent">
+    <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm backdrop-blur-sm hover:shadow-md transition-all duration-200 dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-700 dark:border-amber-500/20 dark:shadow-xl">
       <div className="flex items-center mb-6">
-        <div className="w-10 h-10 academic-accent rounded-xl flex items-center justify-center text-white text-lg mr-3 shadow-lg">
+        <div className="w-10 h-10 bg-gray-600 rounded-xl flex items-center justify-center text-white text-lg mr-3 shadow-sm dark:bg-gradient-to-br dark:from-amber-600 dark:to-orange-700">
           ⏳
         </div>
-        <h3 className="text-2xl font-bold text-stone-900 dark:text-slate-200" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <h3 className="text-2xl font-bold text-gray-800 dark:text-slate-200" style={{ fontFamily: 'Playfair Display, serif' }}>
           Interactive Timeline
         </h3>
       </div>
-      <div className="bg-gradient-to-br from-stone-50 to-amber-25 rounded-xl border border-stone-200 p-4 min-h-[500px] relative overflow-hidden shadow-inner dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-700 dark:border-amber-500/20">
+      <div className="bg-gray-50 rounded-xl border border-gray-200 p-4 min-h-[500px] relative overflow-hidden dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-700 dark:border-amber-500/20">
         {children}
       </div>
     </div>
