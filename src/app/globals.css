@@ -589,6 +589,38 @@
     color: #1f2937 !important;
   }
 
+  /* Fix dark sidebar cards in light theme */
+  html:not(.dark) .bg-amber-50 {
+    background-color: #fffbeb !important;
+    border: 1px solid #f3e8ff !important;
+  }
+
+  html:not(.dark) .bg-gray-800 {
+    background-color: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  }
+
+  html:not(.dark) .border-gray-700 {
+    border-color: #d1d5db !important;
+  }
+
+  html:not(.dark) .text-amber-700 {
+    color: #92400e !important;
+  }
+
+  html:not(.dark) .text-gray-400 {
+    color: #6b7280 !important;
+  }
+
+  html:not(.dark) .text-amber-900 {
+    color: #78350f !important;
+  }
+
+  html:not(.dark) .text-gray-200 {
+    color: #1f2937 !important;
+  }
+
   /* Comprehensive form styling for contribute page */
   .contribute-form input,
   .contribute-form textarea,
