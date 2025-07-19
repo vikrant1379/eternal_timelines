@@ -238,8 +238,8 @@ export default function MapsPage() {
               <div className={`w-12 h-12 bg-gradient-to-br ${region.color} rounded-lg flex items-center justify-center mb-4 shadow-md`}>
                 <MapPin className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>{region.name}</h3>
-              <p className="text-gray-600 text-sm mb-4 serif-text">{region.description}</p>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>{region.name}</h3>
+              <p className="text-gray-700 dark:text-gray-200 text-sm mb-4 serif-text">{region.description}</p>
               <div className="flex items-center justify-between">
                 <span className="text-2xl font-bold text-amber-700" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>{region.events}</span>
                 <span className="text-sm text-gray-500 serif-text">events</span>
